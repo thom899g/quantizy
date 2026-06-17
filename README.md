@@ -11,8 +11,8 @@ and disk space downloading huge model weights.
 
 - macOS Apple Silicon DMG: https://ontarioprotocol.com/Quantizy-macos-arm64.dmg
 - Release manifest: https://ontarioprotocol.com/Quantizy-release.json
-- Versioned DMG: https://ontarioprotocol.com/quantizy/0.1.7/Quantizy-macos-arm64.dmg
-- Buyer quickstart: https://ontarioprotocol.com/quantizy/0.1.7/BUYER_QUICKSTART.md
+- Versioned DMG: https://ontarioprotocol.com/quantizy/0.1.8/Quantizy-macos-arm64.dmg
+- Buyer quickstart: https://ontarioprotocol.com/quantizy/0.1.8/BUYER_QUICKSTART.md
 
 ## Verify
 
@@ -23,7 +23,7 @@ shasum -a 256 Quantizy-macos-arm64.dmg
 Expected SHA-256:
 
 ```text
-6d046444e53366b237e8e1f17d8675e6b2c14128470230c2dcab687f80af9e6e
+d8b50895970676602fef31875cd6f99b79d8026f1ecead19e38e6744754acd19
 ```
 
 The app and DMG are Developer ID signed, Apple-notarized, stapled, and
@@ -47,12 +47,18 @@ their own validation before being marketed as a breakthrough.
 
 ## Release
 
-- Version: `0.1.7`
-- Notary submission: `1a30bf12-4d8f-4b45-8b1d-3b5cc7f790b2`
+- Version: `0.1.8`
+- Notary submission: `4525a256-8281-47fe-bb36-5e3a02ca33f4`
 - Signing identity: `Developer ID Application: THOMAS TOBIAS HANSEN (857AHQ92PC)`
 - Release manifest: [`Quantizy-release.json`](./Quantizy-release.json)
 - Quickstart: [`BUYER_QUICKSTART.md`](./BUYER_QUICKSTART.md)
 - Checksums: [`CHECKSUMS.txt`](./CHECKSUMS.txt)
+
+## 0.1.8 Delta
+
+Quantizy now uses saved route-group scores when a predicted offloaded MoE
+companion group is too large for the current cache. On a crowded Mac, it can
+warm the highest-value subset instead of skipping the whole group.
 
 ## License
 
