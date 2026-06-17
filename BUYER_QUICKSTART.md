@@ -90,7 +90,7 @@ moe-squeeze streaming-mlx-fit-matrix /path/to/local-model \
   --json
 ```
 
-Use `recommended_recipe` when the result says `ok: true`. If it says `ok: false`, use `fallback_recipe`, lower `context_tokens`, close memory-heavy apps, or pick a smaller model. When a recipe uses sparse or tiered KV, carry the recommended `kv_sink_tokens`; the fit check may select this automatically with `kv_sink_source: "auto_sink"`. When a recipe uses tiered KV, Quantizy counts protected cold tokens, query-sketch metadata, coarse landmark metadata, cold-tail page size, and dequantized KV page-cache MiB against the same current-RAM budget.
+Use `recommended_recipe` when the result says `ok: true`. If it says `ok: false`, use `fallback_recipe`, lower `context_tokens`, close memory-heavy apps, or pick a smaller model. The report also includes `runtime_pressure_ladder`: if RAM gets tighter after the first check, use the matching pressure entry's `export_recipe` instead of guessing a smaller context by hand. When a recipe uses sparse or tiered KV, carry the recommended `kv_sink_tokens`; the fit check may select this automatically with `kv_sink_source: "auto_sink"`. When a recipe uses tiered KV, Quantizy counts protected cold tokens, query-sketch metadata, coarse landmark metadata, cold-tail page size, and dequantized KV page-cache MiB against the same current-RAM budget.
 Leave `--kv-tail-quant-axis token` unless the recipe or support says your runner has separate key/value sidecar support. When it does, use `--kv-tail-quant-axis kivi`: Quantizy records key-cache tail packing as `channel` and value-cache tail packing as `token`, so keys get the lower-error channel layout while values keep cheap partial old-token loads.
 Leave `--kv-tail-residual-sign-bits 0` unless the recipe or support says your tiered-KV runner applies residual-sign sidecars. When enabled with `1`, Quantizy stores one packed residual sign bit per cold-tail value plus fp16 per-group residual scales, and counts those bytes in the fit report as `kv_tail_residual_*`.
 When `--auto-prefill-chunk` selects `prefill_chunk_tokens`, keep that value with the recipe for runners that support chunked prompt prefill. It protects against transient long-prompt memory spikes; it does not reduce the model or KV cache size.
@@ -205,7 +205,7 @@ Do not treat draft or unvalidated artifacts as paid quality claims.
 
 - **License rejected**: paste the exact key from the purchase email and check for extra spaces.
 - **DMG checksum mismatch**: stop and contact support; do not install that file.
-- **Fit check fails**: this is not a broken purchase. It means the selected model/context does not fit with the memory currently free. Try the fallback recipe, lower context length, close heavy apps, or use a smaller model/artifact.
+- **Fit check fails**: this is not a broken purchase. It means the selected model/context does not fit with the memory currently free. Try `fallback_recipe`, use a lower `runtime_pressure_ladder` recipe, lower context length, close heavy apps, or use a smaller model/artifact.
 - **App opens but feels slow**: rerun the fit check with a larger RAM reserve.
 - **No purchase email**: contact support with your checkout email. The license worker records a recoverable buyer handoff before email is sent.
 
