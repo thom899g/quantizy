@@ -1,0 +1,25 @@
+{
+  "app": {
+    "name": "Quantizy.app",
+    "path": "/Users/thomashansen/Desktop/quantizy/moe-squeeze/dist/Quantizy.app",
+    "size_bytes": 554426151
+  },
+  "buyer_quickstart": {
+    "name": "BUYER_QUICKSTART.md",
+    "path": "/Users/thomashansen/Desktop/quantizy/moe-squeeze/dist/Quantizy.app/Contents/Resources/docs/BUYER_QUICKSTART.md",
+    "relative_path": "Contents/Resources/docs/BUYER_QUICKSTART.md",
+    "sha256": "f04bca87fbc40d8b28c2181996372b813c3e106f02c6ee491cb2b2963f5b0f0e",
+    "size_bytes": 13517
+  },
+  "created_at": 1781727642,
+  "dmg": {
+    "name": "Quantizy-macos-arm64.dmg",
+    "path": "/Users/thomashansen/Desktop/quantizy/moe-squeeze/dist/Quantizy-macos-arm64.dmg",
+    "sha256": "3c434903611312db20f681576e0a7b456ab05b30c7862e036cb4b49b1eb9a492",
+    "size_bytes": 140834886
+  },
+  "download_url": "https://ontarioprotocol.com/Quantizy-macos-arm64.dmg",
+  "product": "quantizy-mac",
+  "schema": "quantizy.release_manifest.v1",
+  "version": "0.1.6"
+}
