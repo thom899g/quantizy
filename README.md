@@ -11,8 +11,8 @@ and disk space downloading huge model weights.
 
 - macOS Apple Silicon DMG: https://ontarioprotocol.com/Quantizy-macos-arm64.dmg
 - Release manifest: https://ontarioprotocol.com/Quantizy-release.json
-- Versioned DMG: https://ontarioprotocol.com/quantizy/0.1.8/Quantizy-macos-arm64.dmg
-- Buyer quickstart: https://ontarioprotocol.com/quantizy/0.1.8/BUYER_QUICKSTART.md
+- Versioned DMG: https://ontarioprotocol.com/quantizy/0.1.9/Quantizy-macos-arm64.dmg
+- Buyer quickstart: https://ontarioprotocol.com/quantizy/0.1.9/BUYER_QUICKSTART.md
 
 ## Verify
 
@@ -23,7 +23,7 @@ shasum -a 256 Quantizy-macos-arm64.dmg
 Expected SHA-256:
 
 ```text
-d8b50895970676602fef31875cd6f99b79d8026f1ecead19e38e6744754acd19
+bfc39f8a38893ebe0b75b64c49eb7930c523619fa87ae6f6a3d9d55c9c8baa1e
 ```
 
 The app and DMG are Developer ID signed, Apple-notarized, stapled, and
@@ -47,18 +47,26 @@ their own validation before being marketed as a breakthrough.
 
 ## Release
 
-- Version: `0.1.8`
-- Notary submission: `4525a256-8281-47fe-bb36-5e3a02ca33f4`
+- Version: `0.1.9`
+- Notary submission: `a98eea9a-e985-4506-88a2-06199f9a17e7`
 - Signing identity: `Developer ID Application: THOMAS TOBIAS HANSEN (857AHQ92PC)`
 - Release manifest: [`Quantizy-release.json`](./Quantizy-release.json)
 - Quickstart: [`BUYER_QUICKSTART.md`](./BUYER_QUICKSTART.md)
 - Checksums: [`CHECKSUMS.txt`](./CHECKSUMS.txt)
 
-## 0.1.8 Delta
+## Paid Beta Access
 
-Quantizy now uses saved route-group scores when a predicted offloaded MoE
-companion group is too large for the current cache. On a crowded Mac, it can
-warm the highest-value subset instead of skipping the whole group.
+`0.1.9` is the first paid-ready build: the packaged app embeds the Quantizy
+public license key and requires a valid offline license before running the
+squeeze/export path. GitHub Sponsors is the near-term checkout path while
+automatic Stripe worker fulfillment is being brought online.
+
+## 0.1.9 Delta
+
+Quantizy now ships as a license-gated, signed, notarized paid beta build.
+The route-group prefetch scoring from `0.1.8` remains included: on a crowded
+Mac, Quantizy can warm the highest-value offloaded MoE subset instead of
+skipping an oversized companion group.
 
 ## License
 
