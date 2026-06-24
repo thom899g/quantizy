@@ -547,6 +547,25 @@ In the verified survival gate, the summary reports a reduced-context
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.31 Core Delta
+
+Recommended actions now include a `recovery_hint` when a requested context does
+not fit. For an oversized request, the hint reports:
+
+- `reason=requested_context_too_large`
+- `action=lower_context_to_cap`
+- the exact `context_cap_tokens`
+- how many tokens must be reduced
+- whether to try `auto_kv_recipe`
+- whether to try survival priority
+
+Why it matters: this turns a failed fit into a next action. Instead of only
+saying "no," Quantizy can tell the user the safe context cap and point them
+toward the stronger memory search paths that may recover the original request.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
