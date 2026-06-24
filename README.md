@@ -281,6 +281,26 @@ baseline is clearly marked as stronger launch evidence.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.19 Core Delta
+
+The fit matrix now returns a `recommended_action` object for the app, CLI, and
+buyer-facing UI. Instead of only showing technical rows, Quantizy can now say:
+
+- whether the requested context fits
+- whether it selected a reduced-context survival recipe
+- exactly which context token count to use
+- which runtime pressure level, KV settings, and prefill chunk were selected
+- the ready recipe to export with
+- short next steps a normal user can follow
+
+This matters for smaller and crowded Macs. If the original request is too big,
+Quantizy can now turn the result into a clear action such as “set context to
+93,735 tokens and use this critical-pressure recipe,” rather than leaving the
+buyer to interpret the matrix by hand.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
