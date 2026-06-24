@@ -13,17 +13,22 @@ and disk space downloading huge model weights.
 
 ## Paid Beta Status
 
-**Checkout is not live yet.** The signed local `0.1.9` build exists, but the
-public download host and Stripe fulfillment worker must pass before buyers are
-sent to payment.
+**Manual paid beta access is live through GitHub Sponsors.** The signed and
+notarized `0.1.9` build is available from GitHub Releases, and paid activation
+is handled by manual license delivery while automatic Stripe fulfillment is
+being brought online.
 
 Current gate:
 
+- GitHub release DMG:
+  `https://github.com/thom899g/quantizy/releases/download/v0.1.9/Quantizy-macos-arm64.dmg`
+  — live
+- GitHub Sponsors: `https://github.com/sponsors/thom899g` — live for
+  early/manual beta access
 - Public worker: `https://worker.ontarioprotocol.com/ready` — not resolving
-- Public DMG: `https://ontarioprotocol.com/Quantizy-macos-arm64.dmg` — not live
-- GitHub Sponsors: enabled for early/manual beta interest
-- Local release: signed/notarized `0.1.9` artifact exists and matches the
-  checksum below
+- Ontarioprotocol DMG mirror: `https://ontarioprotocol.com/Quantizy-macos-arm64.dmg`
+  — not live
+- Local release: signed/notarized `0.1.9` artifact matches the checksum below
 
 Do not pay anyone claiming to sell Quantizy from a different repository. The
 public product front is:
@@ -57,8 +62,8 @@ The app and DMG are Developer ID signed, Apple-notarized, stapled, and
 Gatekeeper-accepted.
 
 > The checksum is retained so the hosted DMG can be verified once the public
-> download URL is restored. Live checkout must stay closed until the worker
-> readiness endpoint and hosted DMG both pass.
+> mirrors are restored. Automatic Stripe checkout must stay closed until the
+> worker readiness endpoint and hosted mirror both pass.
 
 ## Honest Scope
 
@@ -92,9 +97,10 @@ public license key and requires a valid offline license before running the
 squeeze/export path. GitHub Sponsors is the near-term checkout path while
 automatic Stripe worker fulfillment is being brought online.
 
-For early access, use GitHub Sponsors on `thom899g` or contact the maintainer
-from the same account that will receive the license. Automatic Stripe checkout
-opens only after the worker and public download checks are green.
+For early access, use [GitHub Sponsors](https://github.com/sponsors/thom899g)
+or contact the maintainer from the same account that will receive the license.
+Automatic Stripe checkout opens only after the worker and public download checks
+are green.
 
 Launch copy, reviewer targets, and non-spam outreach templates live in
 [OUTREACH.md](OUTREACH.md).
