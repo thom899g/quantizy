@@ -393,6 +393,28 @@ than a finished runtime-kernel claim.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.24 Core Delta
+
+MHA2MLA cache receipts are now projected to the final selected context. That
+matters for crowded Macs: if survival mode lowers the context to stay inside
+available RAM, the action receipt can show the cache bytes for the context the
+user will actually run, not only the original policy sweep context.
+
+For the current synthetic gate at 8 selected context tokens, the action receipt
+now reports:
+
+- selected `turbo` latent-KV cache: 20 bytes
+- unquantized latent cache at the same context: 32 bytes
+- standard KV cache at the same context: 128 bytes
+- 108 bytes saved versus standard KV for that selected context
+
+This is another evidence/decision upgrade for smaller PCs: Quantizy can tie the
+memory win to the runnable recommendation instead of leaving users to infer it
+from raw planner rows.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
