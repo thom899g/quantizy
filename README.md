@@ -323,6 +323,30 @@ adapter plan for compatible MHA/GQA-style models.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.21 Core Delta
+
+Quantizy now has TurboQuant-style MHA2MLA cache codec planning. The new
+`--mha2mla-cache-codec turbo` option estimates a scale-overhead-free latent KV
+cache, separating it from ordinary affine quantized KV cache planning.
+
+Why it matters: at very low KV bit-widths, per-group scale bytes can eat a large
+part of the theoretical memory win. TurboQuant/PolarQuant-style cache designs
+target that exact overhead. Quantizy now models that path in:
+
+- KV-cache estimates
+- MHA2MLA budget recommendations
+- fit-matrix recipes
+- CLI and API payloads
+- recommended action receipts
+
+In the current synthetic MHA2MLA cache test, the same 4-bit latent cache drops
+from 26 bytes to 14 bytes because the turbo codec removes scale overhead. This
+is planner support, not yet a claim that a finished MLX TurboQuant runtime
+kernel ships in the public Mac app.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
