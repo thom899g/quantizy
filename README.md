@@ -228,6 +228,25 @@ run on this machine" answer instead of a dead-end failure.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.16 Core Delta
+
+Reduced-context survival recommendations now include a structured explanation:
+
+- requested context tokens
+- selected runnable context tokens
+- reduced-token count and percentage
+- retained-context ratio
+- selected pressure level
+- runtime budget, total bytes, and headroom
+- selected prefill chunk
+
+This makes the smaller-machine answer easier to trust: Quantizy does not only
+say "use fewer tokens," it says exactly how much was cut and which RAM-pressure
+budget forced that decision.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
