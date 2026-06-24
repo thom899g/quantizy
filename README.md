@@ -415,6 +415,29 @@ from raw planner rows.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.25 Core Delta
+
+Auto-KV recipe selection now emits an `auto_kv_recipe_delta` receipt. The
+receipt compares the selected KV recipe against the baseline recipe with the
+same fit request, then follows that comparison into the recommended action.
+
+Why it matters: this is the exact buyer question for smaller machines: "what
+changed, and how much bigger can I run?" In the verified 1,000,000-token
+synthetic fit gate, auto-KV selected a tiered offload recipe and reported:
+
+- requested KV bytes dropped from 32,000,000 to 8,539,904
+- KV bytes saved versus baseline: 23,460,096
+- KV saved ratio versus baseline: 73.3128%
+- max-context gain versus baseline: 3,706,476 tokens
+- runtime headroom gain at the selected pressure entry: 23,460,096 bytes
+
+This does not claim better model quality. It makes the memory win auditable, so
+Quantizy can show exactly why an auto-selected recipe fits a lesser PC better
+than the default KV path.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
