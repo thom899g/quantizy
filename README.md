@@ -153,6 +153,25 @@ or other local-AI tools suddenly eat RAM after the first fit check.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.12 Core Delta
+
+The core fit matrix can now be run in survival-priority mode:
+
+```bash
+moe-squeeze streaming-mlx-fit-matrix /path/to/model \
+  --fit-priority survival \
+  --survival-pressure-level critical_pressure
+```
+
+Quality priority still recommends the best recipe for the requested context.
+Survival priority instead asks: "what recipe still runs if this Mac is under
+real pressure from IDEs, browsers, and other local tools?" The report now keeps
+those two promises separate, including whether the survival context is smaller
+than the user originally requested.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
