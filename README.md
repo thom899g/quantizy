@@ -498,6 +498,30 @@ for smaller machines while preserving the honest validation bar.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.29 Core Delta
+
+Auto-KV memory receipts now include buyer-readable multipliers:
+
+- `kv_size_ratio_vs_baseline`
+- `kv_gib_saved_vs_baseline`
+- `total_size_ratio_vs_baseline`
+- `total_gib_saved_vs_baseline`
+- `max_context_multiplier_vs_baseline`
+
+In the verified 1,000,000-token synthetic fit gate, the selected auto-KV recipe
+now reports:
+
+- KV cache size ratio versus baseline: 0.266872
+- max-context multiplier versus baseline: 3.946352x
+- total size ratio versus baseline: 0.763313
+
+Why it matters: Quantizy can now explain the win in the language users care
+about: how much smaller the KV path is and how much more context the same
+machine can carry.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
