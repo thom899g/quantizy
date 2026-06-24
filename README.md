@@ -301,6 +301,28 @@ buyer to interpret the matrix by hand.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.20 Core Delta
+
+The MHA2MLA budget planner now returns a `recommended_action` receipt. This is
+the DeepSeek-style KV-cache path: instead of only estimating whether a latent
+attention adapter might help, Quantizy now summarizes the runnable action:
+
+- selected adapter rank or adaptive rank plan
+- whether the quality gates passed
+- baseline KV bytes versus adapter KV bytes
+- KV bytes saved and savings ratio
+- export command hint
+- the recipe to use after the adapter is exported
+- next steps for quality validation before making a public claim
+
+DeepSeek-V2/V3 made the same broad memory lesson hard to ignore: huge local
+models are often blocked by KV cache, not only by weight size. This upgrade
+makes Quantizy better at turning that insight into a concrete smaller-machine
+adapter plan for compatible MHA/GQA-style models.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
