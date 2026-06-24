@@ -438,6 +438,27 @@ than the default KV path.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.26 Core Delta
+
+The auto-KV recipe delta now includes `changed_knobs`: a compact explanation of
+which memory controls changed versus the baseline recipe.
+
+In the same verified 1,000,000-token synthetic fit gate, Quantizy now reports
+that the win came from switching to tiered offload and selecting:
+
+- `kv_window_tokens=2048`
+- `kv_sink_tokens=128`
+- `kv_tail_offload=true`
+- `kv_tail_bits=4`
+- `kv_tail_quant_axis=kivi`
+
+Why it matters: this makes the recommendation usable by normal buyers. They can
+see not only that Quantizy saved memory, but which exact KV-cache strategy made
+the million-token recipe fit on a smaller/crowded machine.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
