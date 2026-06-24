@@ -143,6 +143,16 @@ moe-squeeze manual-buyer-handoff \
 
 The public DMG remains `0.1.9` until a fresh signed/notarized package is cut.
 
+## 0.1.11 Core Delta
+
+The core fit matrix now has a deeper runtime pressure survival ladder:
+`current`, `moderate`, `heavy`, `severe`, `critical`, and `emergency`.
+That gives smaller or crowded Macs more fallback recipes when IDEs, browsers,
+or other local-AI tools suddenly eat RAM after the first fit check.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
