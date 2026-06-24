@@ -372,6 +372,27 @@ TurboQuant runtime kernel ships in the public Mac app.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.23 Core Delta
+
+The auto MHA2MLA cache policy now emits a compact `selected_policy_delta`
+receipt. That receipt follows the selected cache plan into the fit-matrix
+recommended action and the MHA2MLA budget action.
+
+Why it matters: buyers and reviewers should see the actual memory jump without
+digging through nested policy candidates. For the current synthetic policy gate,
+the receipt says the selected `turbo` plan uses 20 latent-KV bytes, saving:
+
+- 12 bytes versus the unquantized latent cache
+- 8 bytes versus the best passing affine-cache candidate
+- 28.5714% versus that best affine candidate
+
+This keeps the product honest: Quantizy can show exactly where the smaller-PC
+win came from, which baseline it beat, and whether it was a planner win rather
+than a finished runtime-kernel claim.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
