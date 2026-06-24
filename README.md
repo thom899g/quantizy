@@ -127,6 +127,22 @@ The route-group prefetch scoring from `0.1.8` remains included: on a crowded
 Mac, Quantizy can warm the highest-value offloaded MoE subset instead of
 skipping an oversized companion group.
 
+## 0.1.10 Core Delta
+
+The core repo now includes a manual buyer handoff command for the paid beta.
+This turns a GitHub Sponsors payment or support reference into a complete
+license handoff with license key, DMG link, checksum command, quickstart, and
+support URL in one operator step.
+
+```bash
+moe-squeeze manual-buyer-handoff \
+  --email buyer@example.com \
+  --order-id sponsor_reference \
+  --email-body
+```
+
+The public DMG remains `0.1.9` until a fresh signed/notarized package is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).

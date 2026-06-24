@@ -16,6 +16,14 @@
 4. The maintainer verifies the sponsor/payment account and sends an offline
    Quantizy license key manually.
 
+Operator handoff for `0.1.10` core:
+
+```bash
+packaging/mint_manual_license_from_keychain.sh buyer@example.com sponsor_reference
+```
+
+Set `QUANTIZY_HANDOFF_EMAIL_BODY=1` to print paste-ready buyer email text.
+
 ## Fulfillment Status
 
 Manual fulfillment is live. Automatic Stripe fulfillment remains blocked until:
