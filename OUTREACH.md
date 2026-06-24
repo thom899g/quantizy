@@ -18,7 +18,9 @@ before you waste time, disk, and money.**
 - Small YouTube, X, Reddit, and blog reviewers focused on running AI locally
 - Hugging Face users publishing Apple Silicon notes or model quant results
 
-Start with the ranked lead sheet in [OUTREACH_TARGETS.md](OUTREACH_TARGETS.md).
+Start with the ranked lead sheet in [OUTREACH_TARGETS.md](OUTREACH_TARGETS.md),
+then work through the send-ready queue in
+[OUTREACH_SEND_QUEUE.md](OUTREACH_SEND_QUEUE.md).
 
 ## What To Offer
 
