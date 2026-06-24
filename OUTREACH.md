@@ -18,6 +18,8 @@ before you waste time, disk, and money.**
 - Small YouTube, X, Reddit, and blog reviewers focused on running AI locally
 - Hugging Face users publishing Apple Silicon notes or model quant results
 
+Start with the ranked lead sheet in [OUTREACH_TARGETS.md](OUTREACH_TARGETS.md).
+
 ## What To Offer
 
 - Free reviewer license for credible reviewers
