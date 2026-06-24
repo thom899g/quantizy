@@ -247,6 +247,24 @@ budget forced that decision.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.17 Core Delta
+
+Validation receipts can now require a strong dynamic baseline:
+
+```bash
+moe-squeeze validation-receipt \
+  --claim pareto.json:3.5 \
+  --require-strong-baseline
+```
+
+This blocks a quality claim unless the selected evidence includes a strong
+baseline family such as `unsloth_dynamic` or `gguf_dynamic`. Uniform-only wins
+can still be useful internally, but they are no longer enough for a serious V1
+quality claim when this gate is enabled.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
