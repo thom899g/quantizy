@@ -522,6 +522,31 @@ machine can carry.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.30 Core Delta
+
+Recommended fit actions now include a `memory_pressure_summary`. It reports:
+
+- requested context tokens
+- selected/runnable context tokens
+- whether the requested context fits
+- runtime pressure level
+- runtime budget bytes
+- runtime total bytes
+- runtime headroom bytes/GiB/percent
+- selected context ratio
+
+Why it matters: this turns the fit result into a crowded-machine answer. A user
+can see not only which recipe was selected, but whether it actually has
+headroom under the chosen RAM pressure level.
+
+In the verified survival gate, the summary reports a reduced-context
+`critical_pressure` recipe with selected context ratio `0.093735`. In the
+1,000,000-token auto-KV gate, it reports full requested-context fit with
+`29.5376%` runtime headroom.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
