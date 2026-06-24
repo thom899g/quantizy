@@ -1,18 +1,45 @@
+<p align="center">
+  <img src="assets/quantizy-hero.png" alt="Quantizy compresses huge local AI models into a smaller Mac memory footprint" width="100%">
+</p>
+
 # Quantizy
 
-Fit a bigger brain on your Mac.
+**Fit a bigger brain on your Mac.**
 
 Quantizy is a native Apple Silicon app for local-model fit checks, memory
 guardrails, and validated MoE artifact handoff. It is built for normal users who
 want to understand what can actually run on their own Mac before they waste time
 and disk space downloading huge model weights.
 
-## Download
+## Paid Beta Status
 
-- macOS Apple Silicon DMG: https://ontarioprotocol.com/Quantizy-macos-arm64.dmg
-- Release manifest: https://ontarioprotocol.com/Quantizy-release.json
-- Versioned DMG: https://ontarioprotocol.com/quantizy/0.1.9/Quantizy-macos-arm64.dmg
-- Buyer quickstart: https://ontarioprotocol.com/quantizy/0.1.9/BUYER_QUICKSTART.md
+**Checkout is not live yet.** The signed local `0.1.9` build exists, but the
+public download host and Stripe fulfillment worker must pass before buyers are
+sent to payment.
+
+Current gate:
+
+- Public worker: `https://worker.ontarioprotocol.com/ready` — not resolving
+- Public DMG: `https://ontarioprotocol.com/Quantizy-macos-arm64.dmg` — not live
+- GitHub Sponsors: enabled for early/manual beta interest
+- Local release: signed/notarized `0.1.9` artifact exists and matches the
+  checksum below
+
+Do not pay anyone claiming to sell Quantizy from a different repository. The
+public product front is:
+
+```text
+https://github.com/thom899g/quantizy
+```
+
+## What Buyers Get When Checkout Opens
+
+- macOS Apple Silicon app
+- Offline-verifiable license key
+- Release manifest and SHA-256 checksum
+- Buyer quickstart
+- Current-RAM fit checks and pressure-ladder recipes
+- Validated artifact handoff where evidence exists
 
 ## Verify
 
@@ -28,6 +55,10 @@ bfc39f8a38893ebe0b75b64c49eb7930c523619fa87ae6f6a3d9d55c9c8baa1e
 
 The app and DMG are Developer ID signed, Apple-notarized, stapled, and
 Gatekeeper-accepted.
+
+> The checksum is retained so the hosted DMG can be verified once the public
+> download URL is restored. Live checkout must stay closed until the worker
+> readiness endpoint and hosted DMG both pass.
 
 ## Honest Scope
 
@@ -60,6 +91,13 @@ their own validation before being marketed as a breakthrough.
 public license key and requires a valid offline license before running the
 squeeze/export path. GitHub Sponsors is the near-term checkout path while
 automatic Stripe worker fulfillment is being brought online.
+
+For early access, use GitHub Sponsors on `thom899g` or contact the maintainer
+from the same account that will receive the license. Automatic Stripe checkout
+opens only after the worker and public download checks are green.
+
+Launch copy, reviewer targets, and non-spam outreach templates live in
+[OUTREACH.md](OUTREACH.md).
 
 ## 0.1.9 Delta
 
