@@ -192,6 +192,24 @@ without pretending the original request still fits.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.14 Core Delta
+
+The fit matrix now returns a compact recommendation frontier instead of only a
+single winner. The frontier labels the best runnable choices by role:
+
+- best quality at the requested context
+- smallest memory footprint at the requested context
+- maximum current-pressure context
+- safest full-context pressure recipe
+- maximum survival context
+
+This makes the engine more useful for lesser-PC decisions: a user can choose
+whether they want quality, headroom, or context length without manually reading
+every fit row.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
