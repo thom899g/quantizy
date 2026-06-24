@@ -478,6 +478,26 @@ win usable and auditable.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.28 Core Delta
+
+Memory-fit recommendations now include a `quality_gate_command_hint` when
+auto-KV creates the win. The hint gives users a ready starting command:
+
+```bash
+python -m moe_squeeze.cli quality-gate \
+  --model /path/to/model \
+  --mixed-targets 4 \
+  --max-passages 12 \
+  --json-out quantizy_quality_gate.json
+```
+
+Why it matters: Quantizy now closes the loop from "this huge context fits" to
+"run this next before making a quality claim." That keeps the product useful
+for smaller machines while preserving the honest validation bar.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
