@@ -265,6 +265,22 @@ quality claim when this gate is enabled.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.18 Core Delta
+
+Validation receipts now summarize exactly which comparisons are claimable:
+
+- `claimable_comparisons`
+- `strong_claimable_comparisons`
+- `claimable_count`
+- `strong_claimable_count`
+
+That separates internal wins from public-safe claims. A recipe that only beats
+uniform can still be studied, while a recipe that also beats a strong dynamic
+baseline is clearly marked as stronger launch evidence.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
