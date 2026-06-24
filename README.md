@@ -210,6 +210,24 @@ every fit row.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.15 Core Delta
+
+Survival mode now promotes reduced-context recipes when the requested context is
+too large. For example, if a user asks for a 1M-token setup that cannot fit,
+Quantizy can still return a primary runnable survival recipe with:
+
+- `ok: true`
+- `requested_context_fits: false`
+- `selected_context_tokens`
+- `context_reduction_tokens`
+- a ready export recipe for the reduced context
+
+That turns an impossible request into an actionable "this is what will actually
+run on this machine" answer instead of a dead-end failure.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
