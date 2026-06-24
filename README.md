@@ -172,6 +172,26 @@ than the user originally requested.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.13 Core Delta
+
+Survival priority now has an automatic pressure selector:
+
+```bash
+moe-squeeze streaming-mlx-fit-matrix /path/to/model \
+  --fit-priority survival \
+  --survival-pressure-level auto
+```
+
+Auto survival picks the harshest runtime-pressure level that still preserves
+the requested context when possible. If the full request cannot fit, the report
+falls back to the best reduced-context survival recipe and says so plainly.
+This is aimed at the real buyer scenario: the Mac is already running IDEs,
+browsers, and other local tools, so the recommendation must survive pressure
+without pretending the original request still fits.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
