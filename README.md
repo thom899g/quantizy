@@ -459,6 +459,25 @@ the million-token recipe fit on a smaller/crowded machine.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.27 Core Delta
+
+Auto-KV recipe wins now carry an explicit proof boundary:
+
+- `proof_status=memory_fit_proven_quality_unvalidated`
+- `claim_scope=memory_fit_only`
+- `quality_claim_safe=false`
+- `quality_validation_required=true`
+
+Why it matters: Quantizy can now safely say when a recipe makes a huge context
+fit a smaller/crowded machine, while also saying that this is not a quality
+claim until a perplexity or task-quality gate passes.
+
+This protects the product from overclaiming while still making the memory-fit
+win usable and auditable.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
