@@ -347,6 +347,31 @@ kernel ships in the public Mac app.
 This is an engine-side upgrade in `quantizy-core`; the public DMG remains
 `0.1.9` until the next packaged Mac build is cut.
 
+## 0.1.22 Core Delta
+
+Quantizy now auto-searches MHA2MLA latent-cache codecs. The
+`--auto-mha2mla-cache-policy` path sweeps both ordinary `affine` and
+scale-overhead-free `turbo` cache candidates, then only selects a candidate if
+it survives the replay/error gates.
+
+Why it matters: a normal buyer should not need to know which low-level cache
+codec to try. Quantizy can now find the smaller valid plan itself and include it
+in the CLI args, fit-matrix recipe, app API payload, and action receipt.
+
+Current synthetic policy gates show the practical jump:
+
+- low-rank 4-bit latent cache selected `turbo` and dropped from 28 bytes to 20
+  bytes
+- adaptive mixed-rank planning at 16-token selection context dropped from 90
+  bytes to 38 bytes
+- affine-only search remains available for conservative comparison
+
+This is planner and receipt support, not yet a claim that a finished MLX
+TurboQuant runtime kernel ships in the public Mac app.
+
+This is an engine-side upgrade in `quantizy-core`; the public DMG remains
+`0.1.9` until the next packaged Mac build is cut.
+
 ## License
 
 Quantizy is proprietary software. See [`LICENSE.md`](./LICENSE.md).
