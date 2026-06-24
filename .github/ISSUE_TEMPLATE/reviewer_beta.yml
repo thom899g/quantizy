@@ -1,0 +1,33 @@
+name: Quantizy reviewer access
+description: Request a free reviewer license for public testing or coverage.
+title: "Reviewer request: Quantizy"
+labels:
+  - reviewer
+  - beta
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reviewer access is for people who can test Quantizy publicly or provide serious private feedback.
+  - type: input
+    id: channel
+    attributes:
+      label: Review channel
+      description: Link to your YouTube, blog, X, GitHub, Hugging Face, newsletter, or benchmark work.
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: What will you test?
+      description: Tell us what Mac, RAM size, local model workflow, or benchmark you plan to try.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I can publish or send honest feedback, including criticism.
+          required: true

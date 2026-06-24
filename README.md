@@ -11,6 +11,20 @@ guardrails, and validated MoE artifact handoff. It is built for normal users who
 want to understand what can actually run on their own Mac before they waste time
 and disk space downloading huge model weights.
 
+## Buy The Paid Beta
+
+**Early paid beta: $19.**
+
+Sponsor `thom899g` for **$19 or more** on GitHub Sponsors, then open a license
+request from the same GitHub account. Your beta access includes the signed Mac
+app, buyer quickstart, checksum verification, and manual offline license
+delivery.
+
+- Pay / sponsor: https://github.com/sponsors/thom899g
+- Download: https://github.com/thom899g/quantizy/releases/tag/v0.1.9
+- Request license: https://github.com/thom899g/quantizy/issues/new/choose
+- Planned V1 personal license after beta: **$49**
+
 ## Paid Beta Status
 
 **Manual paid beta access is live through GitHub Sponsors.** The signed and
@@ -37,7 +51,7 @@ public product front is:
 https://github.com/thom899g/quantizy
 ```
 
-## What Buyers Get When Checkout Opens
+## What Buyers Get
 
 - macOS Apple Silicon app
 - Offline-verifiable license key
@@ -45,6 +59,7 @@ https://github.com/thom899g/quantizy
 - Buyer quickstart
 - Current-RAM fit checks and pressure-ladder recipes
 - Validated artifact handoff where evidence exists
+- Manual support while Stripe automation is still being wired up
 
 ## Verify
 

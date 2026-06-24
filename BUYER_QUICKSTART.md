@@ -11,13 +11,18 @@ Quantizy helps local-PC users check whether a model can run with the memory they
 
 Quantizy does not download huge base models for you. Start with a model you already have locally, or with a validated artifact that was explicitly included with the release.
 
-Your purchase email is the product handoff: it contains the Quantizy DMG link,
-the expected SHA-256 checksum, your license key, this quickstart link, and the
-support contact for order recovery.
+Your purchase handoff contains the Quantizy DMG link, the expected SHA-256
+checksum, your license key, this quickstart link, and the support contact for
+order recovery. During the paid beta, payment intake runs through GitHub
+Sponsors and license delivery is manual.
 
 ## 1. Download and Verify
 
-Download the Quantizy build from your purchase email.
+Download the Quantizy build from GitHub Releases:
+
+```text
+https://github.com/thom899g/quantizy/releases/download/v0.1.9/Quantizy-macos-arm64.dmg
+```
 
 On macOS, verify the DMG checksum:
 

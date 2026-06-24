@@ -1,0 +1,44 @@
+name: Quantizy paid beta license request
+description: Request manual license delivery after sponsoring the paid beta.
+title: "License request: Quantizy paid beta"
+labels:
+  - paid-beta
+  - license
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for supporting Quantizy. Use the same GitHub account you used for GitHub Sponsors so payment can be verified.
+  - type: input
+    id: sponsor_account
+    attributes:
+      label: Sponsor GitHub account
+      description: The GitHub account that sponsored `thom899g`.
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: input
+    id: amount
+    attributes:
+      label: Sponsor amount
+      description: Early beta access is $19 or more.
+      placeholder: "$19"
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Delivery email
+      description: Optional. Use this only if you do not want the license delivered through GitHub.
+      placeholder: "you@example.com"
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand this is a paid beta with manual license delivery.
+          required: true
+        - label: I understand Quantizy does not guarantee every giant model will run on every Mac.
+          required: true

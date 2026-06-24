@@ -18,7 +18,7 @@
     "sha256": "bfc39f8a38893ebe0b75b64c49eb7930c523619fa87ae6f6a3d9d55c9c8baa1e",
     "size_bytes": 141970204
   },
-  "download_url": "https://ontarioprotocol.com/quantizy/0.1.9/Quantizy-macos-arm64.dmg",
+  "download_url": "https://github.com/thom899g/quantizy/releases/download/v0.1.9/Quantizy-macos-arm64.dmg",
   "product": "quantizy-mac",
   "schema": "quantizy.release_manifest.v1",
   "version": "0.1.9"
