@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.77 Core Delta
+
+Quantizy now reports a concrete free-RAM target for tight high-context recovery
+attempts. When a KV recipe is estimated to fit only by a knife-edge margin, the
+recovery plan no longer just says "try it"; it shows the safer context rerun and
+the extra MiB/GiB to free before retrying full context on a crowded Mac.
+
+That matters for real buyers because the fit check now accounts for the messy
+desktop case: VS Code, browsers, local servers, and other IDEs already consuming
+memory before a model run starts.
+
 ## 0.1.76 Core Delta
 
 Recovery plans now include effort-aware scoring metadata for each next action.
