@@ -96,6 +96,21 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.87 Core Delta
+
+Quantizy now reports a top-level `bottleneck_diagnosis` in the fit-matrix
+recommendation. Instead of making users infer why a huge-model run failed, the
+planner identifies the dominant pressure class and points at the right remedy:
+
+- KV-cache capacity: latent KV, head sharing, cross-layer KV, pruning, or tiered
+  offload
+- prefill workspace: chunked prefill before giving up on context
+- weight/non-KV memory: lower weight memory, lazy sidecars, or a smaller model
+- no bottleneck: run the selected recipe as-is
+
+This is the product becoming more model-aware: long-context failures can now say
+"KV dominates, try KV compression first" directly.
+
 ## 0.1.86 Core Delta
 
 Quantizy now returns a single `resource_recovery_top_choice` beside the full
