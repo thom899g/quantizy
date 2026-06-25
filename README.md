@@ -96,6 +96,19 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.83 Core Delta
+
+Quantizy now scores the storage efficiency of SSD-sidecar upgrades. When a
+better offloaded KV tail needs more SSD reserve than the disk-fitting fallback,
+`disk_fitting_tradeoff` reports:
+
+- quality-score gain per extra GiB
+- storage value tier: `excellent`, `good`, `thin`, or `no_quality_gain`
+
+That makes the recovery advice sharper: users can see whether freeing storage is
+a high-value move or whether they should stick with the already-fitting tail
+recipe.
+
 ## 0.1.82 Core Delta
 
 Quantizy now reports the quality/storage tradeoff when a better offloaded KV
