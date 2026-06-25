@@ -163,6 +163,15 @@ This gives the app a stable way to explain why auto-KV, survival mode, or a
 context cap is being suggested first, without pretending the score is a quality
 benchmark.
 
+## 0.1.37 Core Delta
+
+Oversized-context receipts now include `best_recovery_action`, a compact summary
+of the highest-scored recovery path. It carries the chosen action, score, tier,
+memory gap, expected context, claim scope, and runnable command hint.
+
+The full ranked `recovery_plan` is still present, but the app can now show a
+clear top-line next move immediately.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
