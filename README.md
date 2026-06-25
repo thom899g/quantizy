@@ -96,6 +96,25 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.73 Core Delta
+
+Recovery plans now classify the dominant memory bottleneck for each next action.
+The receipt can distinguish:
+
+- `kv_cache_capacity`
+- `prefill_workspace`
+- `weight_or_non_kv_runtime`
+- `mixed_memory_pressure`
+- `none`
+
+Each recovery command now carries a `memory_bottleneck` object with the method
+family to try, recommended methods, memory relief target, component shares, and
+a plain-language rationale.
+
+Why it matters: smaller-PC users need diagnosis, not just failure. Quantizy can
+now say whether the next best move is KV compression/offload, chunked prefill,
+weight-memory reduction, survival priority, or simply running the known recipe.
+
 ## 0.1.72 Core Delta
 
 Recovery hints now detect prompt-prefill workspace failures and recommend an
