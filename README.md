@@ -420,6 +420,16 @@ free RAM or reduce context before trusting the fit.
 This turns the margin label into an actionable local-PC guardrail instead of a
 passive warning.
 
+## 0.1.63 Core Delta
+
+Knife-edge KV recovery stages now include a computed safety-adjusted context
+target. The receipt carries the 5% memory-gap safety margin, the safer context
+token count, and how many tokens to reduce from the requested context.
+
+That makes the local-PC advice executable: instead of only saying "reduce
+context," Quantizy can provide a concrete context target that gives the recovery
+stage breathing room.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
