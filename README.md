@@ -318,6 +318,17 @@ That makes the first recovery rerun more serious: if the receipt says the model
 needs roughly 6x KV compression, Quantizy no longer wastes the attempt on a weak
 default grid.
 
+## 0.1.53 Core Delta
+
+Target-aware Auto-KV hints now include an explicit `target_aware_profile`.
+Receipts label the recovery profile (`aggressive`, `moderate`, or `light`),
+carry the required KV retained ratio/compression factor, list the selected
+method axes, count tuned option grids, and explain the rationale.
+
+This gives the app a stable summary for users: it can say why Quantizy chose an
+aggressive latent/sharing/pruning search instead of forcing the UI to parse raw
+CLI arguments.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
