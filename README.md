@@ -130,6 +130,17 @@ Each recovery item includes an executable command hint, expected context impact,
 and an explicit claim scope. That makes Quantizy more useful for normal users:
 instead of a dead-end failure, they get a small local optimization plan.
 
+## 0.1.34 Core Delta
+
+Recovery plans now include quantitative memory-impact estimates. For every
+oversized-context recovery step, the JSON receipt reports the runtime budget,
+expected context, estimated total/KV memory, headroom, and minimum memory relief
+needed when the request is over budget.
+
+That makes the lesser-PC story more concrete: users can see whether the next
+move is a stretch attempt to preserve context, a pressure-safe rerun for crowded
+RAM, or a known fitting context cap with zero extra memory relief required.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
