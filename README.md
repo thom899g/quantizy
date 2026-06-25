@@ -457,6 +457,16 @@ cheaper search tier, then the better-ranked recovery item.
 This gives the app one obvious next action for crowded machines instead of a
 bag of equivalent-looking rescue commands.
 
+## 0.1.67 Core Delta
+
+`best_recovery_action` now carries its own `safe_rerun_command` when the
+highest-ranked recovery path has a safer knife-edge rerun. The command includes
+the stage, cost tier, safety action, context reduction, confidence label, and
+ready-to-run CLI arguments.
+
+This lets the app show one primary recovery action with the safer command
+attached, instead of cross-referencing separate summary sections.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
