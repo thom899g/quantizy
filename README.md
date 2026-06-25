@@ -96,6 +96,21 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.82 Core Delta
+
+Quantizy now reports the quality/storage tradeoff when a better offloaded KV
+tail is blocked by SSD headroom. The `offload_disk_plan` includes a
+`disk_fitting_tradeoff` object that compares:
+
+- target tail quality score
+- disk-fitting fallback tail quality score
+- quality-score delta
+- extra SSD reserve needed to unlock the better tail
+- target versus fallback key/value tail precision
+
+This turns SSD recovery from "free some space" into a concrete decision: how
+much storage buys how much better KV tail precision.
+
 ## 0.1.81 Core Delta
 
 Quantizy now includes a disk-fitting fallback inside `offload_disk_plan` when a
