@@ -211,6 +211,15 @@ That makes the safe fallback cost explicit, so users can see both sides of the
 choice: how much context they lose by accepting the cap, and how much they might
 preserve if the best recovery path succeeds.
 
+## 0.1.42 Core Delta
+
+Recovery command hints now include `memory_target` metadata. Each runnable hint
+states the expected context, whether it preserves the requested context, runtime
+budget, minimum memory relief required, fit status, feasibility verdict, and
+decision score.
+
+That ties every suggested rerun to the concrete memory gap it needs to solve.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
