@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.89 Core Delta
+
+Quantizy's bottleneck `method_stack` is now quality-aware. Each recovery method
+can report:
+
+- memory-fit risk
+- quality risk
+- whether quality validation is required
+- the quality-gate command hint to run after memory-fit experiments
+
+This keeps aggressive KV methods useful without overselling them: the planner
+can recommend latent/head-sharing/pruning searches for bigger-model fit, while
+also marking them as memory-fit steps that need validation before quality claims.
+
 ## 0.1.88 Core Delta
 
 Quantizy now adds a ranked `method_stack` to the bottleneck diagnosis. For
