@@ -379,6 +379,17 @@ That matters on lesser PCs: Quantizy can now explain why a fast attempt is worth
 trying without overselling it, and why a deeper full search is probably needed
 for extreme context requests.
 
+## 0.1.59 Core Delta
+
+Auto-KV hints now include a `stage_target_summary` that names the first staged
+command with an explicit target-reaching search, its cost tier, and whether the
+recommended quick stage must escalate before the computed KV target is actually
+covered.
+
+This makes the app's next-step guidance sharper for cramped machines: users can
+start with the cheap stage, but the receipt can plainly say when the full stage
+is the first one designed to reach the memory target.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
