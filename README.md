@@ -96,6 +96,24 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.74 Core Delta
+
+Fit receipts now include an `offload_budget_lift_hint` when a better tiered-KV
+tail recipe is blocked only by the configured sidecar/offload budget.
+
+The hint reports:
+
+- current offload budget
+- required offload budget for the better recipe
+- extra sidecar bytes needed
+- current versus target KV tail quality score
+- target key/value tail bits
+- exact rerun command with `--kv-tail-offload-budget-mib`
+
+Why it matters: on smaller PCs, disk/SSD sidecar space is often cheaper than
+resident RAM. Quantizy can now tell users when adding a small amount of KV
+sidecar budget unlocks a better long-context recipe without increasing RAM.
+
 ## 0.1.73 Core Delta
 
 Recovery plans now classify the dominant memory bottleneck for each next action.
