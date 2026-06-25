@@ -141,6 +141,17 @@ That makes the lesser-PC story more concrete: users can see whether the next
 move is a stretch attempt to preserve context, a pressure-safe rerun for crowded
 RAM, or a known fitting context cap with zero extra memory relief required.
 
+## 0.1.35 Core Delta
+
+Recovery-plan items now include machine-readable feasibility verdicts. Quantizy
+labels each path as `known_fits`, `needs_recipe_search`, or
+`needs_pressure_aware_rescan`, and reports the memory gap that a recipe change
+must close.
+
+This makes the optimizer less hand-wavy: preserve-context attempts are clearly
+marked as searches that must beat the current memory gap, while context-cap
+fallbacks are marked as known fitting paths from the scan.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
