@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.86 Core Delta
+
+Quantizy now returns a single `resource_recovery_top_choice` beside the full
+resource ladder. The app can show one plain first move while still exposing the
+full ladder for inspection:
+
+- close apps/free RAM when that preserves a large amount of context
+- free SSD space when it buys a better offloaded KV tail
+- run the confirmed sidecar plan when disk headroom is already available
+- fall back to the known fitting context when that is the practical choice
+
+This is another normal-user usability step: the output now has a direct
+"do this first" object instead of only a list of possible recovery paths.
+
 ## 0.1.85 Core Delta
 
 Quantizy now reports a RAM recovery tradeoff for high-context retries. When a
