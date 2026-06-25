@@ -192,6 +192,16 @@ separate from memory-fit guidance.
 That lets the app show a plain-language next step without making unsupported
 quality claims.
 
+## 0.1.40 Core Delta
+
+`best_recovery_action` now includes `vs_context_cap`, comparing the selected
+path against the known fitting fallback. It reports the context cap, expected
+context if the selected path succeeds, extra context tokens preserved, context
+multiplier, and fallback fit status.
+
+This makes the tradeoff visible: users can see exactly what they might gain by
+trying auto-KV or survival before accepting the safe context cap.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
