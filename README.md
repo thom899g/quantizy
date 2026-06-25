@@ -368,6 +368,17 @@ This makes the local-PC workflow cleaner: the app can show "try the quick
 low-cost recovery first, escalate to the full search only if needed" without
 digging through every nested command hint.
 
+## 0.1.58 Core Delta
+
+Staged Auto-KV commands now include a `target_fit_estimate` for each stage. The
+quick stage can be marked as a cheap screen when the required KV retained ratio
+is very tight, while the full stage can be marked as the target-reaching search
+when its pruning floors reach the computed memory target.
+
+That matters on lesser PCs: Quantizy can now explain why a fast attempt is worth
+trying without overselling it, and why a deeper full search is probably needed
+for extreme context requests.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
