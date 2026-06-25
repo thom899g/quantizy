@@ -96,6 +96,19 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.84 Core Delta
+
+Quantizy now turns SSD-sidecar tradeoff scores into a direct choice hint. The
+`disk_fitting_tradeoff` object reports a `recommended_choice` such as:
+
+- `free_ssd_for_target_tail`
+- `prefer_disk_fitting_fallback`
+- `use_disk_fitting_fallback`
+- `needs_user_choice`
+
+This lets the app guide users without asking them to interpret quality-per-GiB
+numbers manually.
+
 ## 0.1.83 Core Delta
 
 Quantizy now scores the storage efficiency of SSD-sidecar upgrades. When a
