@@ -295,6 +295,18 @@ This makes the next action less generic: Quantizy can tell the user that a
 latent/tiered KV search is the right next attempt and how much KV compression it
 must achieve before lowering context.
 
+## 0.1.51 Core Delta
+
+Auto-KV recovery commands are now target-aware. When the receipt proves that
+KV-only compression could preserve the requested context, the generated rerun
+command automatically enables deeper memory-method searches: latent KV, KV head
+sharing, asymmetric/tiered tail precision, tail-axis search, paging, and metadata
+search.
+
+That makes the receipt immediately actionable for smaller or crowded machines:
+the first rerun searches the methods most likely to hit the computed compression
+target instead of only toggling a generic auto-KV mode.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
