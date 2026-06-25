@@ -236,6 +236,16 @@ Recovery command hints now include `target_status` labels:
 This lets app surfaces badge rerun commands directly without parsing the
 human-readable target summary.
 
+## 0.1.45 Core Delta
+
+Oversized-context receipts now include `recovery_command_summary`, grouping
+runnable recovery commands by target status. The summary counts commands and
+separates gap-closing attempts from commands that already fit the current
+budget.
+
+This gives the app a direct "what can I run now?" surface without traversing
+every recovery-plan item.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
