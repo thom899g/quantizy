@@ -172,6 +172,16 @@ memory gap, expected context, claim scope, and runnable command hint.
 The full ranked `recovery_plan` is still present, but the app can now show a
 clear top-line next move immediately.
 
+## 0.1.38 Core Delta
+
+Recovery receipts now expose both plan order and score order. Each plan item has
+`score_rank`, and the receipt includes `recovery_plan_score_order`, a compact
+score-sorted view for UI surfaces that want to show highest-confidence actions
+first.
+
+This keeps the original exploration order stable while making the scored
+optimizer path explicit.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
