@@ -96,6 +96,21 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.81 Core Delta
+
+Quantizy now includes a disk-fitting fallback inside `offload_disk_plan` when a
+higher-quality KV tail is blocked by SSD sidecar headroom. If the best tail
+needs more sidecar reserve than the machine has, the report now names the best
+already-fitting offload recipe too.
+
+That means the user gets a real choice:
+
+- free the exact SSD shortfall to unlock the better KV tail
+- run the best lower-sidecar tail recipe that fits the declared/probed disk
+
+This makes the offload path more resilient for small machines with tight local
+storage, especially when RAM can be saved only by moving cold KV state to disk.
+
 ## 0.1.80 Core Delta
 
 Quantizy now produces a unified `resource_recovery_ladder` in the recommended
