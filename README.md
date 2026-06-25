@@ -228,6 +228,14 @@ one-liner generated from the same `memory_target` metadata.
 This gives CLI and app surfaces a ready explanation beside each rerun command,
 such as whether it must recover memory or already fits the current budget.
 
+## 0.1.44 Core Delta
+
+Recovery command hints now include `target_status` labels:
+`memory_gap_to_close`, `fits_current_budget`, or `needs_rerun`.
+
+This lets app surfaces badge rerun commands directly without parsing the
+human-readable target summary.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
