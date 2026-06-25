@@ -307,6 +307,17 @@ That makes the receipt immediately actionable for smaller or crowded machines:
 the first rerun searches the methods most likely to hit the computed compression
 target instead of only toggling a generic auto-KV mode.
 
+## 0.1.52 Core Delta
+
+Target-aware Auto-KV commands now tune their search grids from the required KV
+retained ratio. Very tight targets expand the rerun with more aggressive latent
+rank options, larger KV head/cross-layer sharing candidates, lower channel
+retention floors, and compact asymmetric tail precision options.
+
+That makes the first recovery rerun more serious: if the receipt says the model
+needs roughly 6x KV compression, Quantizy no longer wastes the attempt on a weak
+default grid.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
