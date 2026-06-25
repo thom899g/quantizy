@@ -357,6 +357,17 @@ Staged Auto-KV hints now include `recommended_stage`, `escalation_stage`, and an
 The app can default to the low-cost quick stage and only offer the full expensive
 search when the quick stage fails to preserve the requested context.
 
+## 0.1.57 Core Delta
+
+Recovery command summaries now aggregate staged Auto-KV recovery directly. The
+receipt reports staged command count, quick/full stage counts, cost-tier counts,
+recommended stage counts, and the quick-to-full escalation path with candidate
+multipliers.
+
+This makes the local-PC workflow cleaner: the app can show "try the quick
+low-cost recovery first, escalate to the full search only if needed" without
+digging through every nested command hint.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
