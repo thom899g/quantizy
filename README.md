@@ -96,6 +96,28 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.32 Core Delta
+
+The core fit engine now turns failed oversized-context checks into executable
+recovery hints. When a requested context does not fit, the JSON receipt includes
+ready-to-run rerun commands for both practical next attempts:
+
+```bash
+python -m moe_squeeze.cli streaming-mlx-fit-matrix /path/to/model --auto-kv-recipe --json
+```
+
+```bash
+python -m moe_squeeze.cli streaming-mlx-fit-matrix /path/to/model --fit-priority survival --survival-pressure-level auto --json
+```
+
+This matters for normal local users: if VS Code, browsers, or other IDEs are
+already eating RAM, Quantizy can point them toward pressure-safe survival checks
+or tiered/offloaded KV recipes instead of only saying "lower context." The
+receipt still marks these as memory-fit guidance, not quality claims.
+
+The public Mac DMG remains `0.1.9`; this section tracks the faster-moving open
+core until the next packaged app build is cut.
+
 ## Release
 
 - Version: `0.1.9`
