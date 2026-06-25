@@ -476,6 +476,14 @@ the computed safer context target plus the token reduction.
 This keeps the app's user-facing recovery copy tied to the same memory math as
 the command, rather than making each surface invent its own wording.
 
+## 0.1.69 Core Delta
+
+Summary-level `safe_rerun_commands` now carry the same stable explanation as the
+best recovery action. Whether the app reads the best action or the command
+summary, it gets consistent user-facing copy for knife-edge reruns.
+
+This keeps the automated rescue path coherent across UI surfaces.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
