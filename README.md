@@ -329,6 +329,16 @@ This gives the app a stable summary for users: it can say why Quantizy chose an
 aggressive latent/sharing/pruning search instead of forcing the UI to parse raw
 CLI arguments.
 
+## 0.1.54 Core Delta
+
+Target-aware KV search profiles now include search-breadth metadata:
+per-option value counts, an upper-bound candidate multiplier, and a
+`search_cost_tier`.
+
+This lets the app warn when a recovery attempt is intentionally broad. For very
+tight memory targets, Quantizy can now say the profile is `very_high` cost
+before launching an aggressive latent/sharing/pruning search.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
