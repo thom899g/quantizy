@@ -400,6 +400,17 @@ This makes Quantizy more useful on smaller or already-busy PCs because it can
 separate a cheap exploratory stage from a stage whose explicit KV floor is
 estimated to make the requested context fit.
 
+## 0.1.61 Core Delta
+
+Staged KV closure estimates now include margin and confidence fields. Receipts
+report how many bytes of estimated slack remain after closing the memory gap,
+the margin ratio, and whether the fit is `knife_edge`, `thin`, or
+`comfortable`.
+
+That helps crowded local machines: Quantizy can now warn when a huge-context
+recovery technically closes the gap but leaves almost no buffer for real runtime
+noise.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
