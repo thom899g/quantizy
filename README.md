@@ -439,6 +439,15 @@ full search is knife-edge, the receipt rewrites the command with the safer
 This removes another manual step for users on crowded machines: Quantizy can
 offer the safer rerun directly.
 
+## 0.1.65 Core Delta
+
+Recovery command summaries now expose safe reruns directly via
+`safe_rerun_commands` and `safe_rerun_command_count`. The app no longer has to
+walk nested stage metadata to find the safer command for knife-edge KV fits.
+
+This makes the rescue flow easier to automate: show the safe command first,
+then let advanced users inspect the full staged plan if they want.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
