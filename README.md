@@ -96,6 +96,22 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.72 Core Delta
+
+Recovery hints now detect prompt-prefill workspace failures and recommend an
+auto-prefill rerun before forcing users to lower context. If the model weights
+and KV cache are close but full prompt prefill blows past RAM, the receipt adds:
+
+- `try_auto_prefill_chunk=true`
+- a ready-to-run `--auto-prefill-chunk` command
+- the chunk option grid used for the retry
+- a scored `try_auto_prefill_chunk` recovery-plan item
+- the original blocked prefill bytes and available workspace budget
+
+Why it matters: long prompts can fail because transient attention workspace is
+too large even when persistent model memory is manageable. Quantizy now points
+normal local users toward chunked prefill as the cheaper first fix.
+
 ## 0.1.71 Core Delta
 
 Recovery receipts now include a `survival_ladder` for oversized context runs.
