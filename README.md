@@ -202,6 +202,15 @@ multiplier, and fallback fit status.
 This makes the tradeoff visible: users can see exactly what they might gain by
 trying auto-KV or survival before accepting the safe context cap.
 
+## 0.1.41 Core Delta
+
+The `vs_context_cap` tradeoff now also reports fallback context loss:
+requested context, lost tokens, retained-context ratio, and lost-context ratio.
+
+That makes the safe fallback cost explicit, so users can see both sides of the
+choice: how much context they lose by accepting the cap, and how much they might
+preserve if the best recovery path succeeds.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
