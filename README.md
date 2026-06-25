@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.96 Core Delta
+
+Quantizy's `recovery_decision` now explains why the selected RAM/context recovery
+path is worth taking. It reports:
+
+- extra context tokens preserved versus the fallback cap
+- context tokens gained per extra MiB reclaimed
+- the free-RAM requirement
+- a concise decision rationale
+
+This makes the crowded-RAM recommendation easier to trust: users can see what
+they gain by closing apps instead of immediately dropping to the known context
+fallback.
+
 ## 0.1.95 Core Delta
 
 Quantizy's run-policy cost summary now includes a `recovery_decision` beside the
