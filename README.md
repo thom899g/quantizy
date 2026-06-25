@@ -411,6 +411,15 @@ That helps crowded local machines: Quantizy can now warn when a huge-context
 recovery technically closes the gap but leaves almost no buffer for real runtime
 noise.
 
+## 0.1.62 Core Delta
+
+Knife-edge staged KV fits now produce a `runtime_safety_action`. When a stage is
+estimated to close the gap with almost no margin, the receipt tells the app to
+free RAM or reduce context before trusting the fit.
+
+This turns the margin label into an actionable local-PC guardrail instead of a
+passive warning.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
