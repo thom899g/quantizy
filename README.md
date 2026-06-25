@@ -152,6 +152,17 @@ This makes the optimizer less hand-wavy: preserve-context attempts are clearly
 marked as searches that must beat the current memory gap, while context-cap
 fallbacks are marked as known fitting paths from the scan.
 
+## 0.1.36 Core Delta
+
+Recovery-plan items now carry deterministic `decision_score`,
+`decision_tier`, and `decision_score_reasons` fields. The score is transparent:
+it rewards context retention, known fitting paths, recipe-search potential, and
+penalizes the current memory gap.
+
+This gives the app a stable way to explain why auto-KV, survival mode, or a
+context cap is being suggested first, without pretending the score is a quality
+benchmark.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
