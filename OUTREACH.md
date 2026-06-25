@@ -21,6 +21,8 @@ before you waste time, disk, and money.**
 Start with the ranked lead sheet in [OUTREACH_TARGETS.md](OUTREACH_TARGETS.md),
 then work through the send-ready queue in
 [OUTREACH_SEND_QUEUE.md](OUTREACH_SEND_QUEUE.md).
+For the first manual launch pass, use
+[OUTREACH_WEEK_1.md](OUTREACH_WEEK_1.md).
 
 ## What To Offer
 
