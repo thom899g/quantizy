@@ -349,6 +349,14 @@ This is better for smaller PCs: users can try a fast latent/head-sharing/tail
 precision pass before launching the expensive full search across every selected
 KV axis.
 
+## 0.1.56 Core Delta
+
+Staged Auto-KV hints now include `recommended_stage`, `escalation_stage`, and an
+`escalation_condition`.
+
+The app can default to the low-cost quick stage and only offer the full expensive
+search when the quick stage fails to preserve the requested context.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
