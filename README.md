@@ -256,6 +256,15 @@ recovered.
 That helps distinguish small over-budget misses from major recipe-search
 problems.
 
+## 0.1.47 Core Delta
+
+Recovery command memory targets now include
+`minimum_memory_relief_severity`, classifying normalized gaps as `none`,
+`small`, `moderate`, `large`, or `extreme`.
+
+This gives UI surfaces a direct way to communicate how hard a recovery command
+has to work before it can fit.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
