@@ -115,7 +115,22 @@ already eating RAM, Quantizy can point them toward pressure-safe survival checks
 or tiered/offloaded KV recipes instead of only saying "lower context." The
 receipt still marks these as memory-fit guidance, not quality claims.
 
-The public Mac DMG remains `0.1.9`; this section tracks the faster-moving open
+## 0.1.33 Core Delta
+
+Oversized-context failures now include a ranked recovery plan, not only one
+hint. The receipt orders the next attempts as:
+
+1. Try auto-KV recipes to preserve the requested context with tiered/offloaded
+   KV.
+2. Try survival priority for crowded local RAM when IDEs and browsers are open.
+3. Fall back to the known fitting context cap when the original request cannot
+   be preserved.
+
+Each recovery item includes an executable command hint, expected context impact,
+and an explicit claim scope. That makes Quantizy more useful for normal users:
+instead of a dead-end failure, they get a small local optimization plan.
+
+The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
 ## Release
