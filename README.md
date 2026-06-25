@@ -96,6 +96,24 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.71 Core Delta
+
+Recovery receipts now include a `survival_ladder` for oversized context runs.
+The ladder orders the next commands a crowded local machine should try:
+
+- safest high-context KV rerun with a computed safety margin
+- known fitting fallback context cap
+- ambitious full-context Auto-KV search
+- pressure-aware survival rescan for machines with IDEs/browsers already open
+
+Each ladder entry reports retained context, extra tokens versus the fallback
+cap, the multiplier versus that cap, fit status, memory gap, and the exact
+command to run.
+
+Why it matters: Quantizy now gives normal users an actionable RAM-pressure playbook
+instead of a single "does not fit" answer. It can show when a safer KV rerun
+still preserves substantially more context than the hard fallback cap.
+
 ## 0.1.32 Core Delta
 
 The core fit engine now turns failed oversized-context checks into executable
