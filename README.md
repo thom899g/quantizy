@@ -285,6 +285,16 @@ This turns DeepSeek-style latent KV and stronger tiered/asymmetric KV work into
 a concrete local target: the app can now say how aggressive KV compression must
 be before it can preserve the user's requested context.
 
+## 0.1.50 Core Delta
+
+Recovery plans now consume the `kv_compression_target`. When KV-only compression
+can close an oversized-context memory gap, the auto-KV recovery item carries the
+target into its command hint, explanation, and decision-score reasons.
+
+This makes the next action less generic: Quantizy can tell the user that a
+latent/tiered KV search is the right next attempt and how much KV compression it
+must achieve before lowering context.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
