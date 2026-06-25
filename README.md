@@ -96,6 +96,29 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.76 Core Delta
+
+Recovery plans now include effort-aware scoring metadata for each next action.
+Every recovery command reports:
+
+- `effort_score`
+- `effort_tier`
+- retained requested-context ratio
+- extra context tokens versus the fallback cap
+- decision score per effort point
+- rationale for the effort tier
+
+The command summary also reports:
+
+- counts by effort tier
+- best effort-adjusted command
+- lowest-effort strict context-preserving command
+- lowest-effort full-context-targeting command
+
+Why it matters: normal users should not jump straight to the heaviest research
+path if a cheap rerun or known cap is the right move. Quantizy can now separate
+highest-upside actions from lowest-effort practical actions.
+
 ## 0.1.75 Core Delta
 
 KV-bottleneck recovery plans now include a DeepSeek-style MHA2MLA budget planning
