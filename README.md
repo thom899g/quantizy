@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.94 Core Delta
+
+Quantizy's run-policy cost summary now includes a `close_apps_target` when a
+safe high-context retry needs more RAM. It reports:
+
+- extra RAM to reclaim in bytes/MiB/GiB
+- target safety margin
+- estimated margin after the staged KV search
+- runtime safety action
+- closure confidence
+
+This turns crowded-desktop guidance into a concrete instruction: how much memory
+to free before trusting the higher-context run.
+
 ## 0.1.93 Core Delta
 
 Quantizy's `run_policy.cost_summary` is now RAM-suitability aware. It reports
