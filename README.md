@@ -220,6 +220,14 @@ decision score.
 
 That ties every suggested rerun to the concrete memory gap it needs to solve.
 
+## 0.1.43 Core Delta
+
+Recovery command hints now also include `target_summary`, a short human-readable
+one-liner generated from the same `memory_target` metadata.
+
+This gives CLI and app surfaces a ready explanation beside each rerun command,
+such as whether it must recover memory or already fits the current budget.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
