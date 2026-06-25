@@ -448,6 +448,15 @@ walk nested stage metadata to find the safer command for knife-edge KV fits.
 This makes the rescue flow easier to automate: show the safe command first,
 then let advanced users inspect the full staged plan if they want.
 
+## 0.1.66 Core Delta
+
+Recovery summaries now choose a `best_safe_rerun_command`. When multiple safe
+reruns exist, Quantizy prefers the one that preserves the most context, then the
+cheaper search tier, then the better-ranked recovery item.
+
+This gives the app one obvious next action for crowded machines instead of a
+bag of equivalent-looking rescue commands.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
