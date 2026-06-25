@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.90 Core Delta
+
+Quantizy now adds escalation gates to the bottleneck `method_stack`. The planner
+can say whether a stage is only a screen, whether it can stop after validation,
+or whether the user should fall back to resource recovery or lower context.
+
+This follows the practical lesson from MLA and paged-KV systems: attack KV memory
+directly, but do it in staged steps so smaller machines do not pay for the
+largest search unless the cheap screen fails.
+
 ## 0.1.89 Core Delta
 
 Quantizy's bottleneck `method_stack` is now quality-aware. Each recovery method
