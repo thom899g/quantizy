@@ -96,6 +96,21 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.78 Core Delta
+
+Quantizy now emits an offload disk plan for tiered KV recipes. When the best
+path uses disk-backed KV sidecars, the fit report includes:
+
+- selected sidecar bytes
+- current and recommended offload budgets
+- recommended SSD reserve with slack
+- a rerun command that raises the sidecar budget when a better-quality tail is
+  blocked only by the offload limit
+
+This is aimed at the real "lesser PC" case: keep RAM pressure low by spilling
+cold KV state to a fast local SSD, while making the disk requirement explicit
+before the user starts a long run.
+
 ## 0.1.77 Core Delta
 
 Quantizy now reports a concrete free-RAM target for tight high-context recovery
