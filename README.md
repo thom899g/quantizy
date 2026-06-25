@@ -96,6 +96,24 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.79 Core Delta
+
+Quantizy's KV offload planner is now disk-headroom aware. The fit matrix can
+accept either an explicit free-space budget or an offload directory to probe,
+then reports whether the SSD sidecar reserve fits before recommending a long
+run.
+
+The new `offload_disk_plan` fields include:
+
+- disk headroom status
+- probed or declared free MiB
+- exact sidecar reserve shortfall when the disk is too tight
+- the same plan surfaced in `recommended_action`
+
+This closes another practical gap for smaller machines: the app no longer only
+asks "does RAM fit?" when the winning recipe depends on spilling cold KV state
+to disk.
+
 ## 0.1.78 Core Delta
 
 Quantizy now emits an offload disk plan for tiered KV recipes. When the best
