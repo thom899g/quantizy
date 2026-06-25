@@ -430,6 +430,15 @@ That makes the local-PC advice executable: instead of only saying "reduce
 context," Quantizy can provide a concrete context target that gives the recovery
 stage breathing room.
 
+## 0.1.64 Core Delta
+
+Safety-adjusted KV recovery now includes a ready-to-run command. When a staged
+full search is knife-edge, the receipt rewrites the command with the safer
+`--context-tokens` value while preserving the selected KV search flags.
+
+This removes another manual step for users on crowded machines: Quantizy can
+offer the safer rerun directly.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
