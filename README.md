@@ -96,6 +96,22 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.80 Core Delta
+
+Quantizy now produces a unified `resource_recovery_ladder` in the recommended
+action. Instead of scattering the next move across RAM hints, SSD sidecar hints,
+and context fallback fields, the report gives one ordered list of practical
+choices:
+
+- free RAM for a safer high-context retry
+- free SSD space for a better offloaded KV tail
+- use the known fitting context fallback
+- run the selected recipe when no resource recovery is needed
+
+This makes the "huge model on a crowded machine" workflow clearer: the app can
+show the next physical constraint to fix before the user wastes time on a run
+that fails for RAM, disk sidecar space, or context budget.
+
 ## 0.1.79 Core Delta
 
 Quantizy's KV offload planner is now disk-headroom aware. The fit matrix can
