@@ -246,6 +246,16 @@ budget.
 This gives the app a direct "what can I run now?" surface without traversing
 every recovery-plan item.
 
+## 0.1.46 Core Delta
+
+Recovery command memory targets now include normalized gap size:
+`minimum_memory_relief_ratio` and `minimum_memory_relief_percent`, and the
+human-readable target summary includes the percentage of budget that must be
+recovered.
+
+That helps distinguish small over-budget misses from major recipe-search
+problems.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
