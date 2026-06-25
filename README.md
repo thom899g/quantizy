@@ -96,6 +96,21 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.85 Core Delta
+
+Quantizy now reports a RAM recovery tradeoff for high-context retries. When a
+KV recipe can run only after freeing memory or lowering context, the
+`resource_recovery_ladder` includes `ram_recovery_tradeoff` with:
+
+- extra context tokens preserved versus the fallback cap
+- required free RAM
+- context tokens gained per extra MiB
+- RAM value tier
+- a direct recommended choice
+
+This makes the crowded-desktop case clearer: users can see whether closing apps
+is worth it, or whether they should use the known fitting context fallback.
+
 ## 0.1.84 Core Delta
 
 Quantizy now turns SSD-sidecar tradeoff scores into a direct choice hint. The
