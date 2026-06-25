@@ -96,6 +96,19 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.88 Core Delta
+
+Quantizy now adds a ranked `method_stack` to the bottleneck diagnosis. For
+KV-dominated huge-context failures, the recommendation no longer stops at
+"try KV compression"; it sequences the work:
+
+- quick latent/head-sharing/tail-precision screen first
+- full target-aware KV search only when the quick screen is not enough
+- explicit resource-recovery fallback when the fit is still tight
+
+This saves time on smaller machines by avoiding a full aggressive sweep as the
+first move, while still preserving a path to the high-upside search.
+
 ## 0.1.87 Core Delta
 
 Quantizy now reports a top-level `bottleneck_diagnosis` in the fit-matrix
