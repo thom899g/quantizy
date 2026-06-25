@@ -182,6 +182,16 @@ first.
 This keeps the original exploration order stable while making the scored
 optimizer path explicit.
 
+## 0.1.39 Core Delta
+
+`best_recovery_action` now includes an `explanation` object with a short
+headline and buyer-safe detail text. The explanation names why the action was
+selected, mentions the memory gap when relevant, and keeps quality validation
+separate from memory-fit guidance.
+
+That lets the app show a plain-language next step without making unsupported
+quality claims.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
