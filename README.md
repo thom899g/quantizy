@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.92 Core Delta
+
+Quantizy's `run_policy` now includes a cost summary for staged recovery:
+
+- method and command counts
+- search-stage count
+- first-stage candidate multiplier
+- total candidate multiplier
+- worst search-cost tier
+- whether the policy starts with a low-cost screen
+
+This helps smaller machines avoid surprise full sweeps: the app can show when a
+plan begins cheaply and when escalation would become expensive.
+
 ## 0.1.91 Core Delta
 
 Quantizy now emits a `run_policy` for bottleneck recovery. The method stack still
