@@ -265,6 +265,15 @@ Recovery command memory targets now include
 This gives UI surfaces a direct way to communicate how hard a recovery command
 has to work before it can fit.
 
+## 0.1.48 Core Delta
+
+Recovery command summaries now aggregate memory-gap severity across all runnable
+recovery commands. Receipts report severity counts, worst severity, and the
+highest relief percentage plus the command that requires it.
+
+This lets the app explain whether the overall recovery situation is easy,
+moderate, or extreme without inspecting every command row.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
