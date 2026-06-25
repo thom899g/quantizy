@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.91 Core Delta
+
+Quantizy now emits a `run_policy` for bottleneck recovery. The method stack still
+shows every stage, but the app also gets a concise execution policy:
+
+- first method and command
+- escalation gate
+- stop-after-validation method
+- fallback method
+- whether quality validation is required
+
+For KV-dominated huge-context failures, this defaults to a cheap screen first and
+escalates only when that screen cannot close the memory gap.
+
 ## 0.1.90 Core Delta
 
 Quantizy now adds escalation gates to the bottleneck `method_stack`. The planner
