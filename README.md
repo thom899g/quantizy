@@ -96,6 +96,20 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.93 Core Delta
+
+Quantizy's `run_policy.cost_summary` is now RAM-suitability aware. It reports
+the memory gap as bytes, GiB, ratio, and percent of runtime budget, plus a
+`ram_suitability` tier:
+
+- `crowded_ram_requires_recovery`
+- `tight_ram_monitor_closely`
+- `comfortable_ram_after_policy`
+- `unknown`
+
+This makes the policy clearer on real desktops where IDEs and browsers are
+already consuming memory before the model run starts.
+
 ## 0.1.92 Core Delta
 
 Quantizy's `run_policy` now includes a cost summary for staged recovery:
