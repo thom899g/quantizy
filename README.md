@@ -467,6 +467,15 @@ ready-to-run CLI arguments.
 This lets the app show one primary recovery action with the safer command
 attached, instead of cross-referencing separate summary sections.
 
+## 0.1.68 Core Delta
+
+Safe rerun commands now include a stable explanation with a headline and detail
+text. For knife-edge KV fits, the explanation names the tight margin and states
+the computed safer context target plus the token reduction.
+
+This keeps the app's user-facing recovery copy tied to the same memory math as
+the command, rather than making each surface invent its own wording.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
