@@ -339,6 +339,16 @@ This lets the app warn when a recovery attempt is intentionally broad. For very
 tight memory targets, Quantizy can now say the profile is `very_high` cost
 before launching an aggressive latent/sharing/pruning search.
 
+## 0.1.55 Core Delta
+
+Target-aware Auto-KV hints now include staged recovery commands. Very broad
+profiles expose a low-cost `quick` command first, then the full target-aware
+search as a second stage.
+
+This is better for smaller PCs: users can try a fast latent/head-sharing/tail
+precision pass before launching the expensive full search across every selected
+KV axis.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
