@@ -96,6 +96,18 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.95 Core Delta
+
+Quantizy's run-policy cost summary now includes a `recovery_decision` beside the
+close-apps target. When a high-context retry is possible but tight, the planner
+can explicitly choose:
+
+- free RAM, then run the safer context
+- run the safer context immediately
+- use the known fitting context fallback
+
+This turns staged recovery into an executable decision instead of just telemetry.
+
 ## 0.1.94 Core Delta
 
 Quantizy's run-policy cost summary now includes a `close_apps_target` when a
