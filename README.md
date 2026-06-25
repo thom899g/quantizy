@@ -390,6 +390,16 @@ This makes the app's next-step guidance sharper for cramped machines: users can
 start with the cheap stage, but the receipt can plainly say when the full stage
 is the first one designed to reach the memory target.
 
+## 0.1.60 Core Delta
+
+Staged Auto-KV target estimates now include byte-level memory closure fields:
+estimated retained KV bytes, bytes removed, residual memory gap after the stage,
+and whether that stage is estimated to close the current gap.
+
+This makes Quantizy more useful on smaller or already-busy PCs because it can
+separate a cheap exploratory stage from a stage whose explicit KV floor is
+estimated to make the requested context fit.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
