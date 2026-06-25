@@ -96,6 +96,25 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.75 Core Delta
+
+KV-bottleneck recovery plans now include a DeepSeek-style MHA2MLA budget planning
+step when no latent-attention adapter is active.
+
+When KV compression can theoretically close the memory gap, the receipt adds:
+
+- `try_mha2mla_budget=true`
+- a ready-to-run `streaming-mlx-mha2mla-budget` command
+- automatic output weighting
+- attention-error gating
+- automatic latent-cache policy search
+- turbo/affine latent-cache codec options
+
+Why it matters: if ordinary KV compression is not enough, Quantizy now points
+users toward a validated latent-attention adapter planning path before giving
+up on the requested context. This keeps the DeepSeek-style method in the core
+memory workflow instead of as a separate expert-only tool.
+
 ## 0.1.74 Core Delta
 
 Fit receipts now include an `offload_budget_lift_hint` when a better tiered-KV
