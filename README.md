@@ -484,6 +484,15 @@ summary, it gets consistent user-facing copy for knife-edge reruns.
 
 This keeps the automated rescue path coherent across UI surfaces.
 
+## 0.1.70 Core Delta
+
+Safe rerun explanations now compare the safer KV rerun against the known
+fallback context cap. The receipt reports extra context tokens preserved and the
+context multiplier versus the fallback cap.
+
+This helps users see why the safer KV rerun is still worth trying even after
+lowering context for runtime margin.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
