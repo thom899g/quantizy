@@ -274,6 +274,17 @@ highest relief percentage plus the command that requires it.
 This lets the app explain whether the overall recovery situation is easy,
 moderate, or extreme without inspecting every command row.
 
+## 0.1.49 Core Delta
+
+Oversized-context fit receipts now include a `kv_compression_target`. When a
+requested context misses the current RAM budget, Quantizy computes whether
+KV-only compression could close the gap and reports the required KV retained
+ratio, reduction percentage, and compression factor.
+
+This turns DeepSeek-style latent KV and stronger tiered/asymmetric KV work into
+a concrete local target: the app can now say how aggressive KV compression must
+be before it can preserve the user's requested context.
+
 The public Mac DMG remains `0.1.9`; these sections track the faster-moving open
 core until the next packaged app build is cut.
 
