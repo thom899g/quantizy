@@ -96,6 +96,18 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.97 Core Delta
+
+Quantizy now adds a DeepSeek-V4-inspired `sparse_indexed_kv_policy` for
+ultra-long-context KV bottlenecks. When context is very large and KV cache is the
+dominant pressure source, the planner estimates whether compressed sparse /
+indexed KV retention profiles could close the memory gap.
+
+The method stack now exposes this as a research-grade option after standard KV
+search and before fallback. It is intentionally marked as validation-required:
+this is a planning signal for future sparse-attention work, not a claim that V4
+kernels are already implemented in Quantizy.
+
 ## 0.1.96 Core Delta
 
 Quantizy's `recovery_decision` now explains why the selected RAM/context recovery
