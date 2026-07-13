@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.128 Core Delta
+
+Quantizy now labels sparse indexed KV plans against the new DeepSeek-style
+long-context target zone instead of treating every memory reduction equally.
+Planner output reports whether a candidate is above, near, or inside the
+reported 10%-13.5% physical KV range, and the runtime config carries that label
+forward.
+
+This turns the DeepSeek/FlashMemory insight into a measurable local planning
+check while keeping activation behind Quantizy's own quality gate.
+
 ## 0.1.127 Core Delta
 
 Quantizy can now validate the recommended sparse indexed KV runtime config
