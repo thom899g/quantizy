@@ -96,6 +96,15 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.111 Core Delta
+
+Quantizy now promotes the sparse-selector quality-gate command into the
+run-policy cost summary as `quality_gate_command`. Callers no longer need to
+parse the nested command-hint object to execute the validation step.
+
+This is a small but practical step toward making memory-saving sparse relief
+paths runnable and auditable from the top-level planner output.
+
 ## 0.1.110 Core Delta
 
 Quantizy now attaches a sparse-selector quality-gate command hint when a relief
