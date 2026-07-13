@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.131 Core Delta
+
+Quantizy now promotes the sparse KV paper-target advisory into the Fit Matrix
+method stack as a concrete next action. Instead of hiding the aggressive
+DeepSeek/FlashMemory-style option inside policy metadata, downstream UI/CLI
+surfaces `rerun_sparse_kv_with_paper_target_mode` with the expected target
+profile, retained-ratio reduction, implementation risk, and quality-gate flag.
+
 ## 0.1.130 Core Delta
 
 Quantizy now emits a paper-target advisory when conservative sparse KV planning
