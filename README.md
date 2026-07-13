@@ -96,6 +96,15 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.110 Core Delta
+
+Quantizy now attaches a sparse-selector quality-gate command hint when a relief
+candidate is adoptable. The command uses the existing `quality-gate` runner and
+carries the selected `(chunk_tokens, top_k)` candidate as structured metadata.
+
+This makes an adoptable sparse relief path executable: implement the relief
+candidate, then run the generated quality gate before trusting it.
+
 ## 0.1.109 Core Delta
 
 Quantizy now carries sparse selector relief into the run-policy cost summary.
