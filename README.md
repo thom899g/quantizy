@@ -96,6 +96,15 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.129 Core Delta
+
+Quantizy sparse indexed KV planning now has an explicit `paper_target` mode.
+The default remains conservative, preferring the least risky memory-closing
+profile. When a user needs maximum long-context compression, target mode can
+prefer a DeepSeek/FlashMemory-aligned hybrid plan that reaches the reported
+physical-KV target zone, while still labeling it high risk and requiring a
+quality gate before runtime activation.
+
 ## 0.1.128 Core Delta
 
 Quantizy now labels sparse indexed KV plans against the new DeepSeek-style
