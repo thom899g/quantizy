@@ -96,6 +96,15 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.105 Core Delta
+
+Quantizy's sparse selector relief plan now searches both lower `indexer_top_k`
+and smaller chunked-indexer tile sizes. This matters because selector workspace
+comes from both the merge state and the score tile, not top-k alone.
+
+The planner now reports combined `(chunk_tokens, top_k)` candidates and picks
+the lowest-pressure candidate that still preserves the estimated memory fit.
+
 ## 0.1.104 Core Delta
 
 Quantizy now emits a selector relief plan when sparse/indexed KV is blocked by
