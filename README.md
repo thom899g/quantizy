@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.122 Core Delta
+
+Quantizy now binds sparse selector activation to the selected local-window size.
+Runtime configs include `local_window_tokens`, implementation checklists require
+it, and validation receipts must match it before sparse selector activation is
+authorized.
+
+This closes a quality-safety gap: a quality gate for one recency window can no
+longer accidentally authorize a different sparse local-window tradeoff.
+
 ## 0.1.121 Core Delta
 
 Quantizy now uses sparse local-recency quality risk during sparse KV selection.
