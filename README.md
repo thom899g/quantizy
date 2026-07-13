@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.112 Core Delta
+
+Quantizy now includes explicit sparse selector implementation parameters with
+the quality-gate hint and run-policy summary. The planner carries the selected
+`indexer_top_k`, chunk size, retained top-k ratio, retrieval risk, and selector
+pressure as a compact object.
+
+This reduces ambiguity between planning and implementation: the runner can see
+exactly which sparse selector settings must be implemented before validation.
+
 ## 0.1.111 Core Delta
 
 Quantizy now promotes the sparse-selector quality-gate command into the
