@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.126 Core Delta
+
+Quantizy now emits a runtime-facing sparse indexed KV config for the recommended
+sparse profile, not only for selector-relief cases. The config captures the
+profile, hybrid attention mix, indexer settings, local-window setting, recency
+risk, and quality-gate requirement, and it is surfaced through the sparse method
+stack entry.
+
+This moves sparse KV planning closer to executable prototype handoff while still
+keeping activation disabled until validation passes.
+
 ## 0.1.125 Core Delta
 
 Quantizy sparse selector activation checks now return an `activation_action`.
