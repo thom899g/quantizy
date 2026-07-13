@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.101 Core Delta
+
+Quantizy now ranks sparse/indexed KV profiles with peak-aware selection logic.
+If multiple profiles can fit, it picks the least risky one that still closes the
+memory gap. If none fully fit, it picks the profile with the smallest remaining
+peak-memory gap instead of falling through to an arbitrary research profile.
+
+This makes the DeepSeek-style sparse route more useful for real constrained
+machines: the recommendation now tracks both implementation risk and actual
+memory recovery.
+
 ## 0.1.100 Core Delta
 
 Quantizy's sparse/indexed KV policy is now peak-memory aware. It separates the
