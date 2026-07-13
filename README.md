@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.103 Core Delta
+
+Quantizy now lets selector workspace pressure affect sparse/indexed KV
+prototype decisions. A sparse profile can still report that it closes the memory
+gap, but if the chunked top-k selector workspace is high or extreme relative to
+the runtime budget, the planner downgrades it to research-only until selector
+workspace is reduced or more RAM is available.
+
+This keeps the huge-context path honest on constrained PCs instead of treating
+all theoretical memory closures as equally runnable.
+
 ## 0.1.102 Core Delta
 
 Quantizy now classifies sparse/indexed KV selector workspace pressure against
