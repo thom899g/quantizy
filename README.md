@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.100 Core Delta
+
+Quantizy's sparse/indexed KV policy is now peak-memory aware. It separates the
+old KV-only estimate from the safer estimate that adds chunked top-k indexer
+workspace back into the memory gap.
+
+That prevents a false positive where sparse KV appears to fit because cache
+bytes shrink, but the selector workspace still makes the run unsafe on a
+RAM-crowded local machine.
+
 ## 0.1.99 Core Delta
 
 Quantizy now plans sparse/indexed KV with StreamIndex-style execution risk
