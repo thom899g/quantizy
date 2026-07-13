@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.104 Core Delta
+
+Quantizy now emits a selector relief plan when sparse/indexed KV is blocked by
+top-k workspace pressure. The planner tests lower `indexer_top_k` candidates
+and reports whether any lower-workspace option can keep the memory fit.
+
+This turns a blocked DeepSeek-style sparse route into an actionable tuning path:
+reduce selector workspace first, then prototype only if the lower-pressure
+candidate still closes the memory gap.
+
 ## 0.1.103 Core Delta
 
 Quantizy now lets selector workspace pressure affect sparse/indexed KV
