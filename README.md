@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.107 Core Delta
+
+Quantizy now adds an adoption decision to sparse selector relief plans. A
+candidate that lowers memory is no longer automatically treated as usable: the
+planner distinguishes candidates that can proceed after a sparse quality gate
+from candidates that should remain manual research or be rejected for extreme
+retrieval risk.
+
+This makes sparse relief recommendations closer to something a local runner can
+trust instead of just a list of smaller memory numbers.
+
 ## 0.1.106 Core Delta
 
 Quantizy now scores sparse selector relief candidates for retrieval quality
