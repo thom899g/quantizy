@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.118 Core Delta
+
+Quantizy now treats sliding-window layers in the sparse KV planner as bounded
+local memory instead of full-history KV. The policy defaults to a 4096-token
+local window and honors `sparse_local_window_tokens` or `kv_window_tokens` when
+the runtime supplies one.
+
+This makes the DeepSeek-style hybrid plan materially more realistic for
+lesser-PC long-context runs: local recency layers no longer erase the memory
+benefit of compressed sparse and heavily compressed global-memory layers.
+
 ## 0.1.117 Core Delta
 
 Quantizy now models the DeepSeek-style sparse KV path as a hybrid attention plan
