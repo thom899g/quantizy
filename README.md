@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.124 Core Delta
+
+Quantizy sparse selector activation checks now separate missing receipt fields
+from mismatched fields. Failed activation reports `missing_parameters` for absent
+required values and `parameter_mismatches` only for present-but-wrong values.
+
+This makes sparse runtime failures actionable: the runner can tell whether the
+quality receipt is incomplete or whether it was produced for the wrong selector,
+local-window, or recency-risk setting.
+
 ## 0.1.123 Core Delta
 
 Quantizy now binds sparse selector activation to the selected local-recency risk
