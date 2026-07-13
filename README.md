@@ -96,6 +96,18 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.98 Core Delta
+
+Quantizy's sparse/indexed KV policy now includes a `prototype_decision`. The
+planner distinguishes:
+
+- prototype only after standard KV search fails
+- keep as research-only gap reduction
+- do not prototype for the current case
+
+This keeps the DeepSeek-V4-inspired path useful without letting a research
+estimate override cheaper, already-validated recovery paths.
+
 ## 0.1.97 Core Delta
 
 Quantizy now adds a DeepSeek-V4-inspired `sparse_indexed_kv_policy` for
