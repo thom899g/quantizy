@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.99 Core Delta
+
+Quantizy now plans sparse/indexed KV with StreamIndex-style execution risk
+included. The planner estimates the materialized sparse-attention score matrix
+and compares it with a chunked partition/merge top-k path before recommending
+the DeepSeek-style research route.
+
+This matters for smaller PCs because sparse attention can save KV cache while
+still failing from selector workspace memory. Quantizy now exposes that hidden
+memory risk instead of only reporting the retained KV-cache ratio.
+
 ## 0.1.98 Core Delta
 
 Quantizy's sparse/indexed KV policy now includes a `prototype_decision`. The
