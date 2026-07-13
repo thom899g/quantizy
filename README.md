@@ -96,6 +96,18 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.117 Core Delta
+
+Quantizy now models the DeepSeek-style sparse KV path as a hybrid attention plan
+instead of one generic sparse profile. Profiles now expose their CSA/HCA/sliding
+window layer mix, weighted effective compression ratio, rollout stage, and
+runtime requirements.
+
+This improves the lesser-PC planning story because the estimator can now
+distinguish retrieval-capable compressed sparse layers from heavily compressed
+coarse memory and local recency windows before recommending a risky long-context
+prototype.
+
 ## 0.1.116 Core Delta
 
 Quantizy now includes a sparse selector runtime activation validator. A planned
