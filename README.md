@@ -96,6 +96,18 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.116 Core Delta
+
+Quantizy now includes a sparse selector runtime activation validator. A planned
+DeepSeek-style selector config is not authorized just because it exists: the
+validator checks the receipt status and verifies that the gate receipt matches
+the exact `indexer_top_k` and `chunked_indexer_chunk_tokens` settings before
+returning an enabled runtime config.
+
+This makes sparse/indexed KV work safer for RAM-crowded local PCs: memory-saving
+selector relief can move toward runtime use only after the matching quality gate
+has passed.
+
 ## 0.1.115 Core Delta
 
 Quantizy now binds sparse selector runtime configs to an explicit validation
