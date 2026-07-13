@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.106 Core Delta
+
+Quantizy now scores sparse selector relief candidates for retrieval quality
+risk. Lowering `indexer_top_k` saves memory, but it can also remove useful
+retrieval targets, so candidates now expose retained top-k ratio and a
+moderate/high/very-high retrieval-risk tier.
+
+The relief recommendation prefers lower retrieval risk before chasing the
+smallest possible selector workspace.
+
 ## 0.1.105 Core Delta
 
 Quantizy's sparse selector relief plan now searches both lower `indexer_top_k`
