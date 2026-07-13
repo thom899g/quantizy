@@ -96,6 +96,15 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.115 Core Delta
+
+Quantizy now binds sparse selector runtime configs to an explicit validation
+receipt. The config records the required receipt path, expected pass status, and
+activation rule before the selector can be enabled.
+
+This closes another safety gap: sparse selector relief is not just planned, it
+now has a concrete quality receipt requirement before runtime activation.
+
 ## 0.1.114 Core Delta
 
 Quantizy now emits a runtime-facing sparse selector config artifact for
