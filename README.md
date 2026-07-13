@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.127 Core Delta
+
+Quantizy can now validate the recommended sparse indexed KV runtime config
+directly. The validator converts `quantizy.runtime.sparse_indexed_kv_config.v1`
+into the selector activation schema internally, so runners can pass the
+planner-emitted runtime config plus a receipt and get the same activation action.
+
+This removes another handoff gap between sparse planning and sparse runtime
+activation.
+
 ## 0.1.126 Core Delta
 
 Quantizy now emits a runtime-facing sparse indexed KV config for the recommended
