@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.121 Core Delta
+
+Quantizy now uses sparse local-recency quality risk during sparse KV selection.
+When candidates fit, the planner ranks recency risk explicitly before maximizing
+retained KV ratio, so a memory fit that preserves a safer local window is
+preferred over a more brittle recency tradeoff.
+
+This moves the sparse planner from pure memory fitting toward quality-aware
+memory fitting, which is required before these methods can be trusted on smaller
+PCs.
+
 ## 0.1.120 Core Delta
 
 Quantizy now labels the sparse local-window tradeoff with explicit recency
