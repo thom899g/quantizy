@@ -96,6 +96,17 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.119 Core Delta
+
+Quantizy now searches sparse local-window candidates when the runtime does not
+provide an explicit window. The planner evaluates 16k, 8k, 4k, 2k, and 1k local
+windows, then picks the largest recency window that still fits within the
+least-risky sparse profile.
+
+This improves the lesser-PC path because sparse KV no longer hardcodes one
+recency/fit tradeoff. It can keep more local context when there is headroom and
+shrink the local window when that is what makes a long-context run fit.
+
 ## 0.1.118 Core Delta
 
 Quantizy now treats sliding-window layers in the sparse KV planner as bounded
