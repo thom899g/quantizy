@@ -96,6 +96,16 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.114 Core Delta
+
+Quantizy now emits a runtime-facing sparse selector config artifact for
+adoptable relief candidates. The config includes execution mode, chunk size,
+top-k, quality-gate requirement, validation state, and the expected receipt path.
+
+This moves sparse selector relief from planner-only metadata toward a concrete
+runtime handoff object that can be persisted, inspected, and enabled only after
+validation.
+
 ## 0.1.113 Core Delta
 
 Quantizy now includes an implementation checklist with adoptable sparse selector
