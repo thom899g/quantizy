@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.196 Core Delta
+
+The lookahead residency planner now has a safer bandwidth-pressure ladder.
+Quantizy can choose a more resident, lower-risk sparse-KV layout when offload
+bandwidth is tight instead of failing or over-offloading by default.
+
 ## 0.1.195 Core Delta
 
 Lookahead residency activation is now bound to the exact prefetch assumptions
