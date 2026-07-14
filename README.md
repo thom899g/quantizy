@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.141 Core Delta
+
+Fit Matrix now emits a sparse paper-target adoption-order recommendation. When
+the best target action is very-high implementation risk, the run policy keeps it
+behind standard KV failure and an explicit sparse quality gate instead of
+promoting it as the default first path.
+
 ## 0.1.140 Core Delta
 
 Fit Matrix run-policy cost summaries now expose the best sparse paper-target
