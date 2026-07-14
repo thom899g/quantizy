@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.254 Core Delta
+
+Quantizy readiness checks can now include the current effective runtime budget.
+When that budget is supplied, `memory_method_run_readiness` runs the launch
+guard and returns `free_ram_or_rebenchmark` instead of `ready_to_run` if the
+machine no longer has the measured safe headroom.
+
+This makes the local-PC flow stricter: with browsers, IDEs, and other apps open,
+"ready" now means the validated method can launch under current memory pressure,
+not merely that old benchmark paperwork exists.
+
 ## 0.1.253 Core Delta
 
 Quantizy now exposes a runtime launch-guard validator. A finalized memory-method
