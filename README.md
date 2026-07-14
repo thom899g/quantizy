@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.135 Core Delta
+
+Paper-target sparse KV advisories now estimate same-budget context gain. Fit
+Matrix can report how much extra context the DeepSeek/FlashMemory-style target
+path may support compared with the conservative sparse recommendation, while
+still marking it as an estimate that requires quality validation.
+
 ## 0.1.134 Core Delta
 
 Sparse indexed KV runtime config generation now uses one shared builder for the
