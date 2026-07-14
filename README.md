@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.170 Core Delta
+
+Sparse KV preflight can now build the activation receipt after RAM recovery is
+proved. A valid preflight resource receipt is converted into the exact sparse
+quality receipt required by activation; under-target RAM receipts raise instead
+of producing a misleading runtime receipt.
+
 ## 0.1.169 Core Delta
 
 Sparse KV preflight now has a resource-receipt validator. A runner can check a
