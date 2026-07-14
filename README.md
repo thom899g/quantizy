@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.248 Core Delta
+
+Quantizy now requires measured selector evidence before HISA/MISA-style sparse
+indexers can activate. The benchmark receipt must prove top-k overlap against
+the reference sparse selector and must show that measured selector workspace
+does not exceed the planned HISA/MISA workspace budget.
+
+This tightens the DeepSeek-style sparse-attention path: a clever indexer can no
+longer pass just because memory and perplexity look acceptable. It also has to
+prove it is selecting the same important tokens often enough to be trusted.
+
 ## 0.1.247 Core Delta
 
 Quantizy now adds a HISA-style coarse-to-fine sparse-indexer path. For
