@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.140 Core Delta
+
+Fit Matrix run-policy cost summaries now expose the best sparse paper-target
+action directly. The summary includes the method rank, current sparse method,
+priority score, impact fields, and target runtime config so UI/CLI surfaces can
+show the strongest optional sparse upgrade without traversing the full method
+stack.
+
 ## 0.1.139 Core Delta
 
 The paper-target sparse KV next action now includes a deterministic priority
