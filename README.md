@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.152 Core Delta
+
+Sparse KV policies now promote the selected free-RAM target and runtime action
+to top-level fields, and mirror the free-RAM target into the runtime config.
+Apps and CLIs can now show the exact next step (`run_sparse_kv_after_quality_gate`
+or `free_ram_before_sparse_kv_run`) without digging through nested fit details.
+
 ## 0.1.151 Core Delta
 
 Sparse KV physical-fit checks now emit exact free-RAM targets when a candidate
