@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.184 Core Delta
+
+DSA selected-fine blocks are now budget-aware. Quantizy keeps the full 2048
+fine-block fanout when memory allows, but can step down to the largest fitting
+fanout before falling back to harsher sparse compression.
+
 ## 0.1.183 Core Delta
 
 DSA sparse-KV activation is now receipt-bound to the exact branch identity.
