@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.220 Core Delta
+
+Quantizy now feeds expert prefetch pressure back into automatic resident-set
+selection. Each candidate resident hit-rate plan carries the resulting streamed
+expert IO, blocking miss bytes, required bandwidth, and pressure status, so the
+auto selector can prefer bandwidth-safe resident sets instead of choosing from
+RAM fit and routing hit-rate alone. This makes the MoE offload planner more
+useful on machines where the bottleneck is not just memory, but whether local
+storage can feed cold experts quickly enough.
+
 ## 0.1.219 Core Delta
 
 Quantizy now separates total streamed MoE expert IO from blocking expert misses.
