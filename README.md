@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.244 Core Delta
+
+Quantizy now benchmarks FlashMemory-style lookahead sparse-KV with
+method-specific evidence. The runtime benchmark receipt must include measured
+query-critical recall and measured neural-indexer overhead for
+`lookahead_neural_sparse_kv`, then checks those against the selected contract.
+
+This closes the loop after planning: the method is rejected if it looks good in
+the selector but the real run loses recall, exceeds indexer overhead, overruns
+peak memory, or regresses latency beyond the configured limit.
+
 ## 0.1.243 Core Delta
 
 Quantizy now treats FlashMemory-style lookahead sparse-KV as a first-class
