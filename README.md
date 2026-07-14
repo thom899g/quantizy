@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.249 Core Delta
+
+Quantizy now gates HISA/MISA sparse-indexer activation on measured selector
+latency. The benchmark receipt must include selector latency evidence, and the
+selector work must fit the configured per-decode budget before the method can
+pass.
+
+This closes another small-PC failure mode: a sparse indexer can save memory but
+still make local decode unusably slow. Quantizy now requires memory savings,
+token-selection overlap, workspace fit, and selector latency fit together.
+
 ## 0.1.248 Core Delta
 
 Quantizy now requires measured selector evidence before HISA/MISA-style sparse
