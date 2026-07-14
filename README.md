@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.210 Core Delta
+
+Lookahead sparse-KV offload planning now reserves IO headroom. When live-RAM
+planning is used, Quantizy leaves bandwidth for OS, model loading, swap, and
+other disk activity before accepting an offloaded KV residency plan, so external
+drives are handled more conservatively.
+
 ## 0.1.209 Core Delta
 
 Lookahead sparse-KV offload planning now auto-classifies model storage speed.
