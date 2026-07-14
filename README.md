@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.155 Core Delta
+
+Sparse target adoption checks now surface free-RAM receipt diagnostics directly.
+When activation is held because required RAM was not freed, the adoption result
+and adoption receipt include required freed bytes, receipt freed bytes, and the
+`free_ram_precondition_met` flag. This keeps UI and runner decisions explainable
+at the activation layer.
+
 ## 0.1.154 Core Delta
 
 Sparse activation validation now enforces free-RAM preconditions. If a sparse KV
