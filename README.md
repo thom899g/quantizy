@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.183 Core Delta
+
+DSA sparse-KV activation is now receipt-bound to the exact branch identity.
+Quantizy records branch mode and branch weights in the runtime config and rejects
+quality receipts that try to activate a different sparse-attention structure.
+
 ## 0.1.182 Core Delta
 
 Quantizy now models a DeepSeek-V3.2/NSA-style sparse attention path for huge
