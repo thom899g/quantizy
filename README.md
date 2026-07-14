@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.212 Core Delta
+
+Quantizy can now generate measured sparse-KV bandwidth receipts. The new
+`sparse-kv-bandwidth-probe` command reads a bounded sample from the target model
+drive, writes a JSON bandwidth receipt, and feeds the measured MiB/s value back
+into lookahead sparse-KV offload planning.
+
 ## 0.1.211 Core Delta
 
 Sparse-KV offload planning can now use measured IO bandwidth receipts. Instead
