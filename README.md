@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.228 Core Delta
+
+Quantizy now emits a ranked MoE offload recovery ladder. If cold-expert
+streaming is unsafe on a crowded local machine, the artifact report orders the
+next actions: no-offload RAM fallback, safer resident candidate, lower decode
+TPS, or faster storage / reduced expert streaming. This builds on the same
+lesson from DeepSeek's newer long-context work: compression is only useful when
+the runtime also accounts for bandwidth, locality, and recoverable failure
+paths.
+
 ## 0.1.227 Core Delta
 
 Quantizy now quantifies the RAM cost of the no-offload MoE fallback. When expert
