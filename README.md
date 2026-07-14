@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.235 Core Delta
+
+Quantizy now adds a speculative expert-prefetch advisory for offloaded MoE
+experts. When the trace-derived resident/prefetch plan still has blocking
+offload misses, the planner estimates a receipt-gated future-expert estimator
+path inspired by speculative MoE inference: hidden-state prediction,
+async sidecar prefetch, exact-router fallback, required future-hit rate, and
+bandwidth overlap pressure. This targets the real lesser-PC bottleneck for huge
+MoE models: keeping most experts off RAM while hiding more of the offload cost.
+
 ## 0.1.234 Core Delta
 
 Quantizy now adds a StreamIndex-style exact top-k advisory for DeepSeek
