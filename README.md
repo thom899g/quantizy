@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.205 Core Delta
+
+Sparse indexer buffers can now be page-aligned in the fit planner. Quantizy can
+charge allocator slack for selector score buffers and indexer caches, which
+makes tight-RAM recommendations more realistic on smaller machines.
+
 ## 0.1.204 Core Delta
 
 Sparse-KV fit planning can now charge a separate indexer-cache overhead. This
