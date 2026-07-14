@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.257 Core Delta
+
+Quantizy's sparse-KV residency ladder is now phase-aware during planning, not
+only at final activation. Candidate layouts are compared against the full
+prefill and decode DSA envelope, including neural-indexer and locality metadata
+overhead. When the lowest-risk layout would overflow during decode, Quantizy
+selects the next lower-residency layout that still fits instead of carrying a
+false-positive recommendation into the runtime gate.
+
 ## 0.1.256 Core Delta
 
 Quantizy now carries a DeepSeek Sparse Attention-style phase-layout contract for
