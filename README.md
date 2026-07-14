@@ -32,6 +32,14 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.225 Core Delta
+
+Quantizy now validates MoE expert offload runtime configs before execution.
+`validate_expert_offload_runtime_config` checks schema, resident/offload expert
+counts, resident/offload overlap, unsafe pressure states, and whether the runtime
+receipt contract still matches the config. This prevents stale or manually edited
+offload configs from being run as if they were current planner output.
+
 ## 0.1.224 Core Delta
 
 Quantizy now emits a runtime-facing MoE expert offload config. Artifact
