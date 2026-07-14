@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.203 Core Delta
+
+Memory-method selection now ranks sparse-KV candidates by baseline evidence
+strength. A barely passing sparse result stays high risk, while a repeated win
+with larger perplexity and KL margins can compete more strongly with safer
+latent-KV paths.
+
 ## 0.1.202 Core Delta
 
 Sparse-KV activation is now bound to the strong baseline evidence contract.
