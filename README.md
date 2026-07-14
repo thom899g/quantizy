@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.217 Core Delta
+
+Quantizy now checks MoE expert prefetch bandwidth pressure. For resident/offload
+artifacts with saved routing traces, it estimates streamed expert bytes per
+decoded token, required GiB/s at a target decode rate, and whether the configured
+host/SSD prefetch budget passes, burns reserve headroom, or fails. This moves
+the DeepSeek/FluxMoE-style expert-paging idea into a practical smaller-PC guard:
+offloaded experts are only useful if the machine can actually feed them fast
+enough.
+
 ## 0.1.216 Core Delta
 
 Quantizy now runs an offload pressure preflight for KV sidecar plans. It checks
