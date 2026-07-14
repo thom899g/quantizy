@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.149 Core Delta
+
+Sparse indexed KV selection now uses physical fit tiers when ranking candidates.
+Under tight runtime budgets, candidates that close the theoretical memory gap
+but exceed the physical KV plus selector peak budget lose to lower-footprint
+profiles with headroom. This turns the 0.1.148 fit object into an actual
+selection signal for lesser-PC runs.
+
 ## 0.1.148 Core Delta
 
 Sparse indexed KV candidates now expose a `physical_kv_fit` decision with
