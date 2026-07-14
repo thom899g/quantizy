@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.251 Core Delta
+
+Quantizy now checks benchmark stability across repeated measurements before a
+memory method can activate. When multiple runs are present, measured peak RAM
+and decode speed must stay within configured stability bounds.
+
+This targets crowded local PCs directly: a method that only fits once, or whose
+latency swings under pressure, is not reliable enough to recommend. Quantizy now
+records peak and latency stability ratios in the benchmark receipt and blocks
+activation when repeat runs are unstable.
+
 ## 0.1.250 Core Delta
 
 Quantizy now blocks memory-method activation when measured RAM savings collapse
