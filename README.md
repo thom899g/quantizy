@@ -32,6 +32,19 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.247 Core Delta
+
+Quantizy now adds a HISA-style coarse-to-fine sparse-indexer path. For
+DeepSeek-DSA-shaped long-context runs, the planner can propose block-pooled
+coarse filtering followed by token-level refinement inside the selected blocks,
+reducing selector workspace without changing the downstream sparse-attention
+branch contract.
+
+The HISA path is receipt-gated like the other advanced memory methods: the
+quality gate must match the exact coarse block size, selected block count,
+refinement token count, local window, branch signature, fit-gain receipt, and
+baseline comparison evidence before activation.
+
 ## 0.1.246 Core Delta
 
 Quantizy now requires per-passage quality evidence before sparse-KV methods can
