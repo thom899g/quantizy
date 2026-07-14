@@ -32,6 +32,18 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.243 Core Delta
+
+Quantizy now treats FlashMemory-style lookahead sparse-KV as a first-class
+memory-method candidate. The selector validates the lookahead receipt, adds the
+measured neural-indexer overhead back into runtime peak, subtracts that overhead
+from gross KV savings, and only authorizes the method when the net memory win
+is still positive.
+
+This is an important small-PC guardrail: a neural indexer can look impressive
+while quietly costing more memory than it saves. Quantizy now ranks it only
+when it improves the actual fit math.
+
 ## 0.1.242 Core Delta
 
 Quantizy now has a receipt builder and strict activation check for
