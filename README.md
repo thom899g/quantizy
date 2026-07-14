@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.185 Core Delta
+
+DSA coarse compression is now budget-aware too. Quantizy preserves selected-fine
+fanout first, then chooses the least aggressive coarse compression ratio that
+fits the active RAM budget before escalating to harsher sparse compression.
+
 ## 0.1.184 Core Delta
 
 DSA selected-fine blocks are now budget-aware. Quantizy keeps the full 2048
