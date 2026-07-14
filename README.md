@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.201 Core Delta
+
+Sparse-KV quality claims are now gated against strong equal-budget baselines.
+Quantizy only allows a mixed sparse-KV win claim when repeated passages beat
+both uniform and dynamic-GGUF-style baselines on perplexity and KL divergence.
+
 ## 0.1.200 Core Delta
 
 Sparse-KV residency can now honor a minimum decode-speed target. Quantizy turns
