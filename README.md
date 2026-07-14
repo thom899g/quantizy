@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.161 Core Delta
+
+Sparse KV planning now exposes branch-aware physical memory components for
+DeepSeek-style hybrid attention. The planner separates global retrieval,
+heavily compressed global memory, and local recency branches, and sizes selector
+workspace from indexed branches only. This lowers false peak estimates for
+local-window profiles and gives future runtime code concrete per-branch budgets.
+
 ## 0.1.160 Core Delta
 
 Sparse KV receipt building now validates measured overrides against the receipt
