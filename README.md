@@ -32,6 +32,18 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.245 Core Delta
+
+Quantizy now audits transient prompt-prefill workspace inside memory-method
+benchmark receipts. A method can fit steady-state decode KV and still crash
+while ingesting a long prompt; the benchmark gate now records selected prefill
+workspace bytes, available prefill workspace, and prefill chunk size, then
+blocks activation when prefill workspace exceeds the measured budget.
+
+This makes the long-context path safer on crowded local machines: chunked
+prefill must actually bring the transient spike under budget before the method
+is considered runtime-ready.
+
 ## 0.1.244 Core Delta
 
 Quantizy now benchmarks FlashMemory-style lookahead sparse-KV with
