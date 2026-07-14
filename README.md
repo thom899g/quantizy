@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.198 Core Delta
+
+Sparse-KV residency plans now include a machine-readable tradeoff receipt.
+Quantizy records which resident ratios were rejected by RAM, which were blocked
+by prefetch bandwidth, and why the selected ratio was chosen.
+
 ## 0.1.197 Core Delta
 
 The sparse-KV residency ladder now includes a 90% resident fallback. When RAM
