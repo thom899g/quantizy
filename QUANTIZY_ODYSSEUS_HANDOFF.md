@@ -14,10 +14,10 @@ message was sent without evidence.
 - Payment: https://github.com/sponsors/thom899g
 - License request: https://github.com/thom899g/quantizy/issues/new/choose
 - Price: `$49` personal V1 license
-- Core research head: https://github.com/thom899g/quantizy-core/commit/f137634
-- Core verification: `944 passed, 2 warnings`; this research head adds an
-  opt-in, receipt-gated packed binary sparse-KV query index inspired by recent
-  randomized-signature KV retrieval work. It is not part of
+- Core research head: https://github.com/thom899g/quantizy-core/commit/ca17608
+- Core verification: `945 passed, 2 warnings`; this research head adds
+  receipt-gated binary sparse-KV indexing, token-max needle scoring, and
+  mass-segmented region quotas. It is not part of
   the signed V1.0.1 DMG until a deliberate versioned rebuild is published.
 
 ## Reviewer Offer
