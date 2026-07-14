@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.178 Core Delta
+
+Authorized memory-method activation can now finalize a runtime config. The
+runtime config is only marked enabled and validated when an activation receipt
+passes, and it carries the measured peak, measured savings, latency ratio, and
+embedded activation receipt for auditability.
+
 ## 0.1.177 Core Delta
 
 Runtime memory-method activation is now gated by benchmark evidence. Quantizy
