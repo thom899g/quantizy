@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.165 Core Delta
+
+Sparse KV planning now emits a run-readiness verdict. The planner classifies
+whether a selected sparse profile is ready for a quality gate, needs RAM freed
+first, needs selector relief, needs a measured runtime budget, or should remain
+research-only, using the physical fit tier, selector pressure, and fit-gain
+receipt.
+
 ## 0.1.164 Core Delta
 
 Sparse KV activation now validates the fit-gain receipt itself. Quality receipts
