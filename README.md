@@ -32,6 +32,14 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.215 Core Delta
+
+Quantizy now adds a retrieval-aware KV budget policy inspired by CompressKV and
+InfoKV. Fit planning can attach a runtime contract that gives richer sparse/KV
+metadata to semantic-retrieval heads and later retrieval-heavy layers while
+keeping the rest of the cache cheaper, with a required quality gate before any
+activation claim.
+
 ## 0.1.214 Core Delta
 
 Fit planning now has an explicit DeepSeek-inspired long-context preset. It
