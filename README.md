@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.206 Core Delta
+
+Current-RAM fit planning can now reserve extra pressure headroom for crowded
+desktops. When IDEs or other apps are already open, Quantizy can reduce the
+effective runtime budget before recommending sparse/KV plans, lowering the risk
+of swap, stalls, or crashes.
+
 ## 0.1.205 Core Delta
 
 Sparse indexer buffers can now be page-aligned in the fit planner. Quantizy can
