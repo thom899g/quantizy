@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.223 Core Delta
+
+Quantizy now emits and validates a runtime receipt contract for MoE expert
+offload. The artifact report includes the required receipt fields, planned
+streamed bytes, blocking miss bytes, target decode TPS, and pass conditions; the
+new validator rejects runs whose observed expert stream exceeds the plan or
+misses the target speed. This keeps the smaller-PC claim evidence-based: a plan
+is not treated as proven until the local runtime returns a matching receipt.
+
 ## 0.1.222 Core Delta
 
 Quantizy now turns MoE expert offload pressure into a concrete action. Artifact
