@@ -32,6 +32,14 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.227 Core Delta
+
+Quantizy now quantifies the RAM cost of the no-offload MoE fallback. When expert
+offload is bandwidth-unsafe, the safe fallback config reports the extra resident
+bytes/GiB required, whether all experts fit the current runtime budget, and the
+next fallback action. That makes the recovery path actionable: free/add RAM for
+the no-offload route, or keep pursuing faster storage/lower decode TPS.
+
 ## 0.1.226 Core Delta
 
 Quantizy now emits a safe no-offload fallback config when MoE expert offload is
