@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.148 Core Delta
+
+Sparse indexed KV candidates now expose a `physical_kv_fit` decision with
+runtime budget, physical KV bytes, selector peak bytes, combined peak, headroom,
+budget ratio, and fit tier. This moves the DeepSeek-style sparse KV path closer
+to real lesser-PC selection: the advisor can rank candidates by whether they fit
+the current memory budget, not just by compression ratio.
+
 ## 0.1.147 Core Delta
 
 Sparse indexed KV runtime configs now carry physical KV footprint estimates:
