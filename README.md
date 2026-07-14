@@ -32,6 +32,18 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.250 Core Delta
+
+Quantizy now blocks memory-method activation when measured RAM savings collapse
+versus the selector estimate. Benchmark receipts record the measured savings
+realization ratio and require the measured win to reach the configured fraction
+of the planned win before activation can pass.
+
+This prevents another practical local-run failure: an advanced method may look
+good in planning, but allocator overhead, runtime buffers, or hidden cache
+state can erase most of the promised RAM benefit. Quantizy now checks the real
+win before treating the method as usable.
+
 ## 0.1.249 Core Delta
 
 Quantizy now gates HISA/MISA sparse-indexer activation on measured selector
