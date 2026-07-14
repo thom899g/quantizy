@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.211 Core Delta
+
+Sparse-KV offload planning can now use measured IO bandwidth receipts. Instead
+of relying only on path heuristics, Quantizy can consume a local disk probe JSON
+receipt, plan prefetch budgets from the measured MiB/s value, and bind that
+measurement into the runtime activation receipt.
+
 ## 0.1.210 Core Delta
 
 Lookahead sparse-KV offload planning now reserves IO headroom. When live-RAM
