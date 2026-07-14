@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.233 Core Delta
+
+Quantizy now adds a SPIN-style locality-aware sparse-KV offload check. Lookahead
+residency planning can account for page fetch amplification, bucketed-LRU hit
+rate, and active-set metadata before accepting an offloaded sparse-KV path. This
+keeps SSD/CPU offload honest on smaller PCs: a candidate that fits by raw bytes
+can still be blocked if irregular page fetches miss the decode latency budget,
+and runtime activation must match the exact page/LRU/metadata assumptions.
+
 ## 0.1.232 Core Delta
 
 Quantizy now models a MISA-style routed indexer for DeepSeek Sparse Attention
