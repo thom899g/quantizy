@@ -37,8 +37,9 @@ the only ask is that you test the actual fit-check/current-RAM workflow.
 Use this for paid beta users:
 
 ```text
-Paid beta is $19 through GitHub Sponsors. It includes the signed Mac build,
-buyer quickstart, checksum verification, and manual offline license delivery.
+V1 personal access is $49 through GitHub Sponsors. It includes the signed Mac
+build, buyer quickstart, checksum verification, and manual offline license
+delivery.
 ```
 
 ## Batch 1: Send First
@@ -102,7 +103,7 @@ Your MLX/GGUF benchmarks are exactly why I built Quantizy.
 Once users know runtimes are fast, they still need to know whether a model fits
 their current Mac RAM before downloading 20-100GB of weights.
 
-Quantizy is a $19 paid beta for fit checks, pressure recipes, and staged KV/RAM
+Quantizy V1 is a $49 app for fit checks, pressure recipes, and staged KV/RAM
 recovery decisions. I’m offering free reviewer licenses for honest tests:
 
 https://github.com/thom899g/quantizy
@@ -165,7 +166,7 @@ V1 focuses on:
 No miracle claims. The goal is fewer failed downloads and better local-model
 decisions.
 
-Paid beta: $19
+V1 personal access: $49
 https://github.com/thom899g/quantizy
 ```
 
@@ -210,4 +211,3 @@ Copy one row per send.
 | Date | Target | Channel | Message variant | Status | Notes |
 | --- | --- | --- | --- | --- | --- |
 | YYYY-MM-DD |  |  |  | ready/sent/replied/declined |  |
-

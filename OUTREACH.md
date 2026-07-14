@@ -7,7 +7,7 @@ before you waste time, disk, and money.**
 ## Product Links
 
 - Product front: https://github.com/thom899g/quantizy
-- Early beta: $19 through https://github.com/sponsors/thom899g
+- V1 personal license: $49 through https://github.com/sponsors/thom899g
 - Maintainer: https://github.com/thom899g
 
 ## Who To Contact
@@ -27,8 +27,7 @@ For the first manual launch pass, use
 ## What To Offer
 
 - Free reviewer license for credible reviewers
-- $19 paid beta access for early users
-- $49 planned V1 personal license after beta
+- $49 V1 personal access for early users
 - Clear request: test whether Quantizy saves time and prevents bad downloads
 - Permission to publish critical results
 - No claim that Quantizy beats every existing quantization method
@@ -43,7 +42,7 @@ guardrails, and validated model handoff.
 It is aimed at normal users who want to know what can actually run on their own
 Mac before downloading huge weights.
 
-The paid beta is $19 through GitHub Sponsors, and I’m also lining up a few
+V1 personal access is $49 through GitHub Sponsors, and I’m also lining up a few
 honest reviewers with free reviewer licenses. Would you be open to testing it?
 
 Product front:
@@ -66,7 +65,7 @@ https://github.com/thom899g/quantizy
 Early access:
 https://github.com/sponsors/thom899g
 
-Beta price: $19
+V1 price: $49
 ```
 
 ## Reviewer Follow-Up

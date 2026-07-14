@@ -1,25 +1,25 @@
 {
   "app": {
     "name": "Quantizy.app",
-    "path": "/Users/thomashansen/Desktop/quantizy/moe-squeeze/dist/Quantizy.app",
-    "size_bytes": 554433955
+    "path": "Quantizy.app",
+    "size_bytes": 566947814
   },
   "buyer_quickstart": {
     "name": "BUYER_QUICKSTART.md",
-    "path": "/Users/thomashansen/Desktop/quantizy/moe-squeeze/dist/Quantizy.app/Contents/Resources/docs/BUYER_QUICKSTART.md",
+    "path": "BUYER_QUICKSTART.md",
     "relative_path": "Contents/Resources/docs/BUYER_QUICKSTART.md",
-    "sha256": "0ca9223477fcaa40efb5f71a9579e22fe4fe69a6f29e2eb8f89ee043304e8eca",
-    "size_bytes": 13753
+    "sha256": "6dc69b8dfe837d3ac094123bc7e4a5f203b332a8de57222616f277d617edac75",
+    "size_bytes": 17488
   },
-  "created_at": 1781740212,
+  "created_at": 1784032324,
   "dmg": {
     "name": "Quantizy-macos-arm64.dmg",
-    "path": "/Users/thomashansen/Desktop/quantizy/moe-squeeze/dist/Quantizy-macos-arm64.dmg",
-    "sha256": "bfc39f8a38893ebe0b75b64c49eb7930c523619fa87ae6f6a3d9d55c9c8baa1e",
-    "size_bytes": 141970204
+    "path": "Quantizy-macos-arm64.dmg",
+    "sha256": "51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622",
+    "size_bytes": 145933104
   },
-  "download_url": "https://github.com/thom899g/quantizy/releases/download/v0.1.9/Quantizy-macos-arm64.dmg",
+  "download_url": "https://github.com/thom899g/quantizy/releases/download/v1.0.0/Quantizy-macos-arm64.dmg",
   "product": "quantizy-mac",
   "schema": "quantizy.release_manifest.v1",
-  "version": "0.1.9"
+  "version": "1.0.0"
 }

@@ -1,43 +1,65 @@
-# Quantizy Payment And Fulfillment
+# Quantizy V1 Payment And Fulfillment
 
 ## Current Price
 
-- Early paid beta: **$19**
-- Planned V1 personal license: **$49**
+- Quantizy V1 personal license: **$49**
+- Reviewer access: free for relevant reviewers who agree to test the actual
+  fit-check workflow and share honest results
 
 ## Buyer Flow
 
-1. Sponsor `thom899g` for **$19 or more**:
-   https://github.com/sponsors/thom899g
-2. Download the signed DMG:
-   https://github.com/thom899g/quantizy/releases/download/v0.1.9/Quantizy-macos-arm64.dmg
-3. Open a license request:
-   https://github.com/thom899g/quantizy/issues/new/choose
-4. The maintainer verifies the sponsor/payment account and sends an offline
-   Quantizy license key manually.
+1. Pay through [GitHub Sponsors](https://github.com/sponsors/thom899g).
+2. Open a [license request](https://github.com/thom899g/quantizy/issues/new/choose)
+   from the same GitHub account and include the sponsor/payment reference.
+3. The maintainer confirms the payment and sends the same V1 handoff every
+   time: offline license key, release URL, SHA-256 checksum, buyer quickstart,
+   and support path.
+4. Download V1 from the
+   [GitHub Release](https://github.com/thom899g/quantizy/releases/tag/v1.0.0)
+   and verify the checksum before opening the DMG.
 
-Operator handoff for `0.1.10` core:
+V1 download:
+
+```text
+https://github.com/thom899g/quantizy/releases/download/v1.0.0/Quantizy-macos-arm64.dmg
+```
+
+V1 DMG SHA-256:
+
+```text
+51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622
+```
+
+## Operator Fulfillment
+
+From the core repo, the maintainer can mint a license without exposing the
+private signing seed:
 
 ```bash
 packaging/mint_manual_license_from_keychain.sh buyer@example.com sponsor_reference
 ```
 
-Set `QUANTIZY_HANDOFF_EMAIL_BODY=1` to print paste-ready buyer email text.
+The command reads the seed from the macOS Keychain and produces the license
+handoff. The V1 app verifies that key offline.
 
 ## Fulfillment Status
 
-Manual fulfillment is live. Automatic Stripe fulfillment remains blocked until:
-
-- `https://worker.ontarioprotocol.com/ready` resolves and returns healthy.
-- The Ontarioprotocol DMG mirror returns the same SHA-256 as the GitHub release.
-- The webhook creates and returns a valid offline license key after payment.
+The local payment-to-delivery smoke test passes. Automatic Stripe fulfillment
+is **not live**: `worker.ontarioprotocol.com` does not currently resolve, so no
+Stripe checkout button is advertised or opened. This is deliberate; a paid
+checkout must not accept money until the worker readiness gate passes with the
+same V1 version and checksum.
 
 ## Delivery Promise
 
-Buyers should receive:
+Confirmed buyers receive:
 
 - Signed and notarized macOS Apple Silicon app
 - Offline-verifiable license key
-- Buyer quickstart
+- V1 buyer quickstart
 - SHA-256 checksum
-- Support path for license recovery
+- Support and license-recovery path
+
+V1 sells fit advice, current-RAM guardrails, and safer local-model decisions.
+It does not promise that every large model will run on every Mac or that
+Quantizy beats every uniform or dynamic quantization baseline.

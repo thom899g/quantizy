@@ -28,7 +28,7 @@ or public submission channel. Do not automate repeated DMs.
 
 | Target | Why it fits | Angle |
 | --- | --- | --- |
-| Hacker News Show HN | Good fit once the demo page is tight | "Show HN: Quantizy, a $19 Mac app that checks what local AI models your Mac can actually run." |
+| Hacker News Show HN | Good fit once the demo page is tight | "Show HN: Quantizy, a $49 Mac app that checks what local AI models your Mac can actually run." |
 | Product Hunt | Good later, after at least one external reviewer | Use once there is proof and a short demo clip. |
 | Ars Technica forum threads | Technical users discuss MLX/Ollama changes | Comment only if relevant to an active local AI discussion. |
 | Windows Central local AI coverage | Covers non-dGPU local AI usability | Pitch the broader "normal people running local AI" story, not only Mac. |
@@ -60,7 +60,7 @@ or public submission channel. Do not automate repeated DMs.
 ## One-Line Pitch Variants
 
 ```text
-Quantizy is a $19 Mac paid beta that tells local-AI users what their Mac can
+Quantizy is a $49 V1 Mac app that tells local-AI users what their Mac can
 actually run before they download giant model files.
 ```
 

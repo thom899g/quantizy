@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "app_launch": true,
+    "artifact_inspection": true,
+    "buyer_start": true,
+    "license_flow": true,
+    "plan_preview": true,
+    "quality_report_import": true,
+    "squeeze_blocking": true
+  },
+  "dmg_sha256": "51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622",
+  "evidence": {
+    "app_build": "QUANTIZY_RELEASE_VERSION=1.0.0 packaging/build_macos_app.sh; Developer ID signed, Apple notarized, stapled",
+    "apple_notarization": "xcrun notarytool accepted submission 67607b0a-8c4b-4510-87f2-4af6721e894f; stapler validate passed for app and DMG",
+    "developer_id_signature": "codesign --verify --deep --strict passed; spctl accepted the notarized Developer ID app and DMG",
+    "focused_core_tests": "pytest tests/test_latent_kv.py tests/test_tiered_kv.py tests/test_stripe_license.py tests/test_stripe_webhook_server.py tests/test_release_doctor.py -> 173 passed",
+    "buyer_handoff_smoke": "license-fulfillment-smoke with macOS Keychain seed, V1 manifest, outbox, and test webhook -> ok true; webhook_completed, license_verifies, buyer_handoff_complete, buyer_email_complete, ready_gate",
+    "signed_app_buyer_start": "Quantizy --no-open --port 8779; /api/buyer-start -> quantizy.app_buyer_start.v1, release_version 1.0.0, license_required true, GitHub quickstart configured",
+    "signed_app_license": "/api/license -> public_key_configured true; no license token exposed",
+    "release_manifest": "dist/Quantizy-release.json version 1.0.0 matches DMG SHA-256 51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622 and bundled quickstart SHA-256 6dc69b8dfe837d3ac094123bc7e4a5f203b332a8de57222616f277d617edac75",
+    "optional_test_gap": "Six broader app tests require safetensors, which is not installed in this environment; no result is claimed for those tests",
+    "worker_ready_smoke": "Production worker.ontarioprotocol.com DNS still does not resolve; automatic Stripe checkout remains closed until the worker passes /ready",
+    "payment_scope": "V1 can be fulfilled manually after a confirmed GitHub Sponsors payment; no live Stripe checkout is claimed",
+    "scope": "V1 is a paid fit-advisor and memory-guardrail release. It does not claim universal model support or a proven compression-quality win."
+  },
+  "operator": "codex-v1-qa",
+  "passed": true,
+  "release_version": "1.0.0",
+  "schema": "quantizy.manual_qa.v1",
+  "tested_at": "2026-07-14T12:39:19Z"
+}
