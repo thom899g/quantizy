@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.158 Core Delta
+
+Sparse KV quality-gate command hints now include a receipt contract. The hint
+spells out required status, selector parameters, freed-RAM proof, post-free
+effective-budget proof, and the receipt path so the generated quality receipt
+can be validated without ambiguity.
+
 ## 0.1.157 Core Delta
 
 Sparse adoption diagnostics now include post-free effective-budget fields:
