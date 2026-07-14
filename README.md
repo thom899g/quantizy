@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.151 Core Delta
+
+Sparse KV physical-fit checks now emit exact free-RAM targets when a candidate
+does not fit the effective current budget. If all sparse candidates are over
+budget, selection prefers the candidate requiring the least additional RAM to
+free, giving the user a concrete "close apps/free X MiB" path instead of a dead
+end.
+
 ## 0.1.150 Core Delta
 
 Sparse indexed KV selection is now current-RAM-aware. When the fit report comes
