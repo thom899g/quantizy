@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.160 Core Delta
+
+Sparse KV receipt building now validates measured overrides against the receipt
+contract by default. Under-reported freed RAM, under-target post-free effective
+budget, or a non-passing status raises before a malformed receipt can reach
+selector activation. `strict=False` remains available for negative validation
+tests.
+
 ## 0.1.159 Core Delta
 
 Quantizy now exposes `build_sparse_kv_quality_receipt`, a helper that turns a
