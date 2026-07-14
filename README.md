@@ -32,6 +32,18 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.242 Core Delta
+
+Quantizy now has a receipt builder and strict activation check for
+FlashMemory-style neural memory indexers. A lookahead sparse-KV runtime config
+can no longer be enabled by a generic pass receipt when it carries a neural
+indexer contract. The receipt must prove query-critical recall at or above the
+contract and measured indexer overhead at or below the planned budget.
+
+This matters for smaller PCs because the method only helps if the indexer saves
+more KV memory than it costs. Quantizy now rejects the path when recall is too
+low or the indexer state eats the memory win.
+
 ## 0.1.241 Core Delta
 
 Quantizy now turns the newer DeepSeek/FlashMemory direction into a concrete
