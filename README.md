@@ -32,6 +32,14 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.226 Core Delta
+
+Quantizy now emits a safe no-offload fallback config when MoE expert offload is
+bandwidth-unsafe. If the primary runtime config is rejected because cold-expert
+streaming would stall decode, the report includes a `safe_fallback_config` that
+keeps all experts resident and disables expert offload. It may require more RAM,
+but it gives runners a deterministic safe alternative instead of only a failure.
+
 ## 0.1.225 Core Delta
 
 Quantizy now validates MoE expert offload runtime configs before execution.
