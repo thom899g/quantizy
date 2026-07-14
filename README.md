@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.188 Core Delta
+
+Selector relief is now MISA-aware. When selector workspace is too large, Quantizy
+searches not just smaller chunks and lower fine top-k, but also routed active
+indexer-head counts, then emits a quality-gate plan for the safest fitting
+candidate.
+
 ## 0.1.187 Core Delta
 
 Explicit sparse local windows now degrade gracefully under RAM pressure.
