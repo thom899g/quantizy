@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.175 Core Delta
+
+Memory-method selection now emits an auditable selection receipt. Each run
+records the selected method, gate order, authorized and blocked methods,
+minimum-relief target, runtime budget, and selected metrics so a buyer-facing
+fit decision can be explained after the fact.
+
 ## 0.1.174 Core Delta
 
 The memory-method selector is now quality-aware. It can take a minimum memory
