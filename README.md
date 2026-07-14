@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.176 Core Delta
+
+Quantizy now has runtime benchmark receipts for selected memory methods. A
+selector decision can be checked against measured peak memory, baseline peak
+memory, latency ratio, runtime budget, and selector-estimated peak before the
+fit claim is treated as supported.
+
 ## 0.1.175 Core Delta
 
 Memory-method selection now emits an auditable selection receipt. Each run
