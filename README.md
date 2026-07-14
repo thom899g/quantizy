@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.147 Core Delta
+
+Sparse indexed KV runtime configs now carry physical KV footprint estimates:
+requested logical context, requested KV bytes, estimated physical KV bytes,
+bytes removed, per-token KV cost, and same-budget context expansion. This makes
+DeepSeek-style sparse memory plans usable by fit advisors and UIs in actual RAM
+numbers instead of abstract ratios only.
+
 ## 0.1.146 Core Delta
 
 Sparse target adoption holds now surface exact receipt/config drift at the
