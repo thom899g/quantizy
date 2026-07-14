@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.238 Core Delta
+
+Quantizy now ranks speculative expert-prefetch estimator styles instead of
+treating them as one generic research path. The advisory can choose between
+same-block trace transition rules, Fate-style cross-layer gate prediction, and
+hidden-state future-expert estimation based on actual saved route evidence,
+observed hit rates, runtime support, and quality risk. This makes offloaded MoE
+planning more actionable on lesser PCs: use the lowest-risk predictor the
+artifact trace actually supports before asking for more RAM.
+
 ## 0.1.237 Core Delta
 
 Quantizy now routes expert-offload recovery through speculative prefetch when
