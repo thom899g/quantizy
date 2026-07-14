@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.207 Core Delta
+
+Crowded-desktop pressure reserve controls are now exposed through the CLI and
+local app API. Fit-matrix runs can reserve an extra fraction or minimum GiB of
+current RAM before recommending model, KV, and sparse attention plans.
+
 ## 0.1.206 Core Delta
 
 Current-RAM fit planning can now reserve extra pressure headroom for crowded
