@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.222 Core Delta
+
+Quantizy now turns MoE expert offload pressure into a concrete action. Artifact
+inspection emits an `expert_offload_pressure_action` that says whether to run
+the current resident/prefetch plan, measure local IO, switch to a safer resident
+candidate, lower decode TPS, use faster storage, or add RAM. This closes the
+loop from "expert offload is bandwidth-bound" to a direct smaller-PC recovery
+step instead of leaving the user with raw bandwidth numbers.
+
 ## 0.1.221 Core Delta
 
 Quantizy artifact inspection can now use measured local IO bandwidth for MoE
