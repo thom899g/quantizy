@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.216 Core Delta
+
+Quantizy now runs an offload pressure preflight for KV sidecar plans. It checks
+the recommended SSD reserve against declared or probed free disk plus swap/OS
+headroom, warning when an offloaded long-context recipe would technically fit
+but leave too little room for macOS swap, model reads, and filesystem overhead.
+
 ## 0.1.215 Core Delta
 
 Quantizy now adds a retrieval-aware KV budget policy inspired by CompressKV and
