@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.181 Core Delta
+
+Memory-method readiness is now exposed through the CLI. The app and scripts can
+load selector, benchmark, activation, and finalization JSON receipts, then get a
+machine-readable next action or a ready-to-run verdict before enabling runtime
+memory methods.
+
 ## 0.1.180 Core Delta
 
 Memory-method readiness now includes actionable next-step payloads. The app can
