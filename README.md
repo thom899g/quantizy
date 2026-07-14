@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.232 Core Delta
+
+Quantizy now models a MISA-style routed indexer for DeepSeek Sparse Attention
+paths. Instead of assuming every DSA query must scan the prefix with all 64
+indexer heads, the planner can emit a gated `misa_routed_*` runtime config that
+uses query-dependent head routing, block-pooled router statistics, and an exact
+receipt match for active heads, router block size, router overhead, branch
+signature, and fit-gain receipt. On the 524k-token DSA fixture this cuts the
+estimated selector peak from `2,097,152` bytes to `1,310,720` bytes while keeping
+the same sparse token path and requiring a separate quality gate.
+
 ## 0.1.231 Core Delta
 
 Quantizy now imports the key DeepSeek-V4 CSA/HCA runtime guardrails into the
