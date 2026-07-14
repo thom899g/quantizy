@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.224 Core Delta
+
+Quantizy now emits a runtime-facing MoE expert offload config. Artifact
+inspection returns `expert_offload_runtime_config` with resident expert IDs,
+offloaded expert IDs, prefetch slots, target decode TPS, bandwidth budgets,
+planned stream/blocking bytes, and the matching runtime receipt contract. This
+gives local runners a concrete execution contract instead of forcing them to
+reconstruct the plan from diagnostic fields.
+
 ## 0.1.223 Core Delta
 
 Quantizy now emits and validates a runtime receipt contract for MoE expert
