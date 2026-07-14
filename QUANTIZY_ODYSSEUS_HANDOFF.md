@@ -14,12 +14,14 @@ message was sent without evidence.
 - Payment: https://github.com/sponsors/thom899g
 - License request: https://github.com/thom899g/quantizy/issues/new/choose
 - Price: `$49` personal V1 license
-- Core research head: https://github.com/thom899g/quantizy-core/commit/759ae8a
-- Core verification: `946 passed, 2 warnings`; this research head adds
+- Core research head: https://github.com/thom899g/quantizy-core/commit/6ca625a
+- Core verification: `947 passed, 2 warnings`; this research head adds
   receipt-gated binary sparse-KV indexing, token-max needle scoring,
   mass-segmented region quotas, and bounded history-aware region scoring. It
-  also bounds temporary quantization-sensitivity tensors for crowded Macs. It
-  is not part of
+  also bounds temporary quantization-sensitivity tensors and adds bounded BF16
+  shard reads for the low-RAM MLX planner/export path, so common BF16 model
+  snapshots can be inspected without loading the full source model. It is not
+  part of
   the signed V1.0.1 DMG until a deliberate versioned rebuild is published.
 - Real-model gate: still unproven. A bounded OLMoE 6.92B full-precision
   sensitivity probe reached 5% system-wide free memory on the development Mac
