@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.169 Core Delta
+
+Sparse KV preflight now has a resource-receipt validator. A runner can check a
+free-RAM receipt against the RAM recovery plan before launching the sparse
+quality gate, proving both freed bytes and post-free effective budget meet the
+activation thresholds.
+
 ## 0.1.168 Core Delta
 
 Sparse KV resource guards now include a RAM recovery plan. The guard tells the
