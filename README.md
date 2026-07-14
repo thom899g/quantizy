@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.240 Core Delta
+
+Quantizy now binds speculative expert-prefetch receipts to the selected
+estimator and its overhead budget. A receipt must echo the estimator identity,
+source paper, runtime overhead bytes, overhead class, small-PC overhead fit,
+hit rate, hidden bytes, remaining bytes, fallback mode, and bandwidth status
+before activation is allowed. This prevents a receipt for a cheap predictor
+from accidentally enabling a heavier learned estimator that would hurt the
+memory win on a smaller machine.
+
 ## 0.1.239 Core Delta
 
 Quantizy now makes speculative expert-prefetch estimator selection overhead
