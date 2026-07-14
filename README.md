@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.202 Core Delta
+
+Sparse-KV activation is now bound to the strong baseline evidence contract.
+Quantizy will not enable or claim a sparse/mixed KV quality win unless the
+quality receipt includes a passing equal-budget comparison against uniform and
+dynamic-GGUF-style baselines.
+
 ## 0.1.201 Core Delta
 
 Sparse-KV quality claims are now gated against strong equal-budget baselines.
