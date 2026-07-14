@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.237 Core Delta
+
+Quantizy now routes expert-offload recovery through speculative prefetch when
+the trace proves there are blocking misses that a future-expert estimator could
+hide. Instead of jumping straight from bandwidth failure to "add RAM / slower
+decode / faster storage", the recovery ladder now places a receipt-gated
+speculative-prefetch validation step first, while keeping the no-offload and
+lower-TPS fallbacks behind it. This makes the lesser-PC MoE path more useful:
+try proven overlap before requiring more resident experts.
+
 ## 0.1.236 Core Delta
 
 Quantizy now makes speculative expert prefetch receipt-bound instead of leaving
