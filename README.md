@@ -32,6 +32,14 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.214 Core Delta
+
+Fit planning now has an explicit DeepSeek-inspired long-context preset. It
+combines sparse/latent/tiered KV recipe search, measured offload bandwidth,
+conservative IO contention, long-context ladders up to 1M tokens, and runtime
+support warnings so Quantizy can plan more realistically for DeepSeek V3.2/V4
+style local long-context workloads.
+
 ## 0.1.213 Core Delta
 
 Fit-matrix planning can now run a small sparse-KV bandwidth probe automatically.
