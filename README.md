@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.142 Core Delta
+
+Sparse paper-target adoption order now includes enforceable preconditions. For
+very-high-risk target paths, runners must see standard KV failure or rejection,
+explicit paper-target selection, a passing sparse target receipt, and receipt
+parameters matching the target runtime config before activation.
+
 ## 0.1.141 Core Delta
 
 Fit Matrix now emits a sparse paper-target adoption-order recommendation. When
