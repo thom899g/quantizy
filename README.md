@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.190 Core Delta
+
+Lookahead residency now has an executable quality-gate plan. Quantizy emits the
+runtime config, implementation checklist, and validation command needed to test
+the sparse-KV residency/offload path before any runtime adoption.
+
 ## 0.1.189 Core Delta
 
 Quantizy now plans FlashMemory-style lookahead residency for sparse KV. In tight
