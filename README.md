@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.177 Core Delta
+
+Runtime memory-method activation is now gated by benchmark evidence. Quantizy
+creates an activation receipt only when the selector receipt and measured
+benchmark receipt both pass for the same method/profile, preventing validated
+planning from being mistaken for validated runtime activation.
+
 ## 0.1.176 Core Delta
 
 Quantizy now has runtime benchmark receipts for selected memory methods. A
