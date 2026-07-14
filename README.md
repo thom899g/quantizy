@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.150 Core Delta
+
+Sparse indexed KV selection is now current-RAM-aware. When the fit report comes
+from `--use-current-ram`, the policy keeps the nominal runtime budget but ranks
+candidates against an `effective_runtime_budget_bytes` derived from current
+available memory minus reserve. This prevents optimistic sparse KV choices when
+IDEs, browsers, or other local tools have already consumed RAM.
+
 ## 0.1.149 Core Delta
 
 Sparse indexed KV selection now uses physical fit tiers when ranking candidates.
