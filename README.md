@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.137 Core Delta
+
+Paper-target sparse KV advisories now classify estimated fit impact as small,
+moderate, material, or major headroom. The tier considers both same-budget
+context gain and same-context KV GiB saved, giving the UI a concise signal for
+whether the aggressive sparse path is likely worth validating.
+
 ## 0.1.136 Core Delta
 
 Paper-target sparse KV advisories now estimate same-context KV bytes saved and
