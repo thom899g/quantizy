@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.193 Core Delta
+
+Sparse-KV residency estimates are now allocator-aware. Quantizy charges page
+slack and per-entry rounding overhead into the resident peak before deciding
+whether a DeepSeek-style mixed cache layout actually fits current RAM.
+
 ## 0.1.192 Core Delta
 
 Quantizy now plans DeepSeek V4-style bucketed cache packing for mixed sparse-KV
