@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.191 Core Delta
+
+Lookahead sparse-KV residency now has receipt-bound runtime validation.
+Quantizy rejects mismatched, missing, or failed residency receipts before
+enabling the offload/residency runtime path.
+
 ## 0.1.190 Core Delta
 
 Lookahead residency now has an executable quality-gate plan. Quantizy emits the
