@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.187 Core Delta
+
+Explicit sparse local windows now degrade gracefully under RAM pressure.
+Quantizy tries the requested recency window first, then falls back to smaller
+windows only when needed, recording the fallback in the runtime config and
+quality-gate receipt.
+
 ## 0.1.186 Core Delta
 
 Inspired by recent sparse-indexer research, DSA selector heads are now
