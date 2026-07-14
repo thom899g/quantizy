@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.219 Core Delta
+
+Quantizy now separates total streamed MoE expert IO from blocking expert misses.
+The planner no longer treats "not prefetched" as "not loaded"; every offloaded
+expert demand is counted against stream bandwidth, while prefetch hit-rate only
+decides how much of that IO can be overlapped before decode needs the expert.
+This makes expert paging estimates more honest for smaller PCs: a plan can be
+memory-feasible but still too slow if the unhidden offload stream overwhelms
+host or SSD bandwidth.
+
 ## 0.1.218 Core Delta
 
 Quantizy now makes automatic MoE expert prefetch slot selection bandwidth-aware.
