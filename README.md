@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.213 Core Delta
+
+Fit-matrix planning can now run a small sparse-KV bandwidth probe automatically.
+When live-RAM planning is used, the local app measures a bounded sample from the
+model drive, uses that measured MiB/s value for lookahead sparse-KV offload
+decisions, and binds the resulting receipt into runtime activation.
+
 ## 0.1.212 Core Delta
 
 Quantizy can now generate measured sparse-KV bandwidth receipts. The new
