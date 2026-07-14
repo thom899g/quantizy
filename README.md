@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.200 Core Delta
+
+Sparse-KV residency can now honor a minimum decode-speed target. Quantizy turns
+the requested tokens/second into a stricter fetch-latency budget and rejects
+offloaded layouts that would fit RAM but miss the speed target.
+
 ## 0.1.199 Core Delta
 
 Runtime activation is now bound to the sparse-KV residency tradeoff receipt.
