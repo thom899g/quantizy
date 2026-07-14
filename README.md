@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.199 Core Delta
+
+Runtime activation is now bound to the sparse-KV residency tradeoff receipt.
+Quantizy rejects activation if the receipt changes the selected resident ratio
+or hides a different RAM-vs-prefetch decision than the planner made.
+
 ## 0.1.198 Core Delta
 
 Sparse-KV residency plans now include a machine-readable tradeoff receipt.
