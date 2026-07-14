@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.138 Core Delta
+
+The Fit Matrix paper-target next action now carries the sparse fit-impact tier,
+same-budget context multiplier, extra context estimate, and same-context extra
+weight/RAM budget. Runners no longer need to inspect nested advisory metadata
+to prioritize whether the aggressive sparse path is worth validating.
+
 ## 0.1.137 Core Delta
 
 Paper-target sparse KV advisories now classify estimated fit impact as small,
