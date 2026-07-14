@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.162 Core Delta
+
+Sparse KV activation now binds quality receipts to the exact branch layout. A
+receipt must match the selected DeepSeek-style branch signature, including
+global/coarse/local branch roles, compression ratios, indexed-branch flags, and
+compressed-token counts, before activation can proceed.
+
 ## 0.1.161 Core Delta
 
 Sparse KV planning now exposes branch-aware physical memory components for
