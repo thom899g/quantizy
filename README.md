@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.153 Core Delta
+
+Sparse KV policy output now includes a recommended quality-gate command hint
+with runtime action and free-RAM preconditions. Method-stack consumers also see
+the sparse command directly, so a UI can prevent launching sparse validation
+until the required RAM has been freed.
+
 ## 0.1.152 Core Delta
 
 Sparse KV policies now promote the selected free-RAM target and runtime action
