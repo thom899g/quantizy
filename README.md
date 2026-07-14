@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.134 Core Delta
+
+Sparse indexed KV runtime config generation now uses one shared builder for the
+conservative and paper-target paths. This keeps profile, selector, local-window,
+paper-target, quality-gate, and activation metadata consistent as new sparse
+runtime modes are added.
+
 ## 0.1.133 Core Delta
 
 The paper-target sparse KV runtime config now carries its own quality-gate
