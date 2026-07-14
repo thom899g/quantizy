@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.174 Core Delta
+
+The memory-method selector is now quality-aware. It can take a minimum memory
+relief target, blocks methods that do not clear the required gap, and otherwise
+prefers the lower-risk validated method instead of chasing maximum compression
+when a safer method already solves the fit problem.
+
 ## 0.1.173 Core Delta
 
 The unified memory-method selector is now peak-aware. It reports each
