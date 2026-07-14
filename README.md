@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.208 Core Delta
+
+Current-RAM planning now has automatic crowded-desktop pressure reserves. When
+the local app uses live available RAM, Quantizy reserves extra headroom before
+recommending sparse-KV and model-fit plans, which better reflects Macs already
+running IDEs, browsers, and other memory-heavy tools.
+
 ## 0.1.207 Core Delta
 
 Crowded-desktop pressure reserve controls are now exposed through the CLI and
