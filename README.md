@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.179 Core Delta
+
+Memory-method runs now have a readiness summary. Quantizy reports the next
+missing evidence step before runtime activation, such as planning a method,
+running a benchmark, fixing a failed benchmark receipt, building activation, or
+finalizing the runtime config.
+
 ## 0.1.178 Core Delta
 
 Authorized memory-method activation can now finalize a runtime config. The
