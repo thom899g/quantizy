@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.157 Core Delta
+
+Sparse adoption diagnostics now include post-free effective-budget fields:
+required effective budget, receipt effective budget, and whether the effective
+budget precondition passed. Activation holds can now explain whether the user
+failed to free enough RAM or whether the measured post-free budget still does
+not fit the sparse KV physical peak.
+
 ## 0.1.156 Core Delta
 
 Sparse free-RAM receipts now validate the post-free effective runtime budget,
