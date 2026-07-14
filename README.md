@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.156 Core Delta
+
+Sparse free-RAM receipts now validate the post-free effective runtime budget,
+not just reported freed bytes. A receipt must show enough effective budget to
+cover the selected sparse KV physical peak plus margin before activation can
+proceed, closing the gap between "I freed RAM" and "the run now fits."
+
 ## 0.1.155 Core Delta
 
 Sparse target adoption checks now surface free-RAM receipt diagnostics directly.
