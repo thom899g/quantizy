@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.186 Core Delta
+
+Inspired by recent sparse-indexer research, DSA selector heads are now
+budget-aware. Quantizy keeps all 64 indexer heads when memory allows, but can
+route down to 32, 16, or 8 active heads under tight RAM budgets so the sparse-KV
+path can still fit on smaller machines.
+
 ## 0.1.185 Core Delta
 
 DSA coarse compression is now budget-aware too. Quantizy preserves selected-fine
