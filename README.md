@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.197 Core Delta
+
+The sparse-KV residency ladder now includes a 90% resident fallback. When RAM
+allows but offload bandwidth is weak, Quantizy can spend more RAM to reduce
+fetch traffic instead of rejecting the runtime path outright.
+
 ## 0.1.196 Core Delta
 
 The lookahead residency planner now has a safer bandwidth-pressure ladder.
