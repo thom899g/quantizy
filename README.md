@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.172 Core Delta
+
+Quantizy now has a unified memory-method selector. Sparse indexed KV and
+MHA-to-MLA latent KV are ranked together, but only receipt-authorized methods
+can be selected; missing or mismatched receipts stay visible as blocked
+candidates instead of being silently activated.
+
 ## 0.1.171 Core Delta
 
 MHA-to-MLA latent-cache policies now have activation receipts. Quantizy can
