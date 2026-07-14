@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.194 Core Delta
+
+Lookahead sparse-KV residency is now bandwidth-aware. Quantizy blocks residency
+candidates that fit RAM but would exceed the configured offload prefetch budget,
+so slow disk or CPU-memory paths do not get treated as usable runtime wins.
+
 ## 0.1.193 Core Delta
 
 Sparse-KV residency estimates are now allocator-aware. Quantizy charges page
