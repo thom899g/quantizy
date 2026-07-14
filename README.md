@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.209 Core Delta
+
+Lookahead sparse-KV offload planning now auto-classifies model storage speed.
+When live-RAM planning is used, Quantizy treats models under `/Volumes` as
+external/slower storage unless a measured bandwidth is supplied, then binds that
+bandwidth assumption into the residency quality-gate receipt.
+
 ## 0.1.208 Core Delta
 
 Current-RAM planning now has automatic crowded-desktop pressure reserves. When
