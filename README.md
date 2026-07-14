@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.218 Core Delta
+
+Quantizy now makes automatic MoE expert prefetch slot selection bandwidth-aware.
+When several trace-derived prefetch plans are possible, it no longer picks the
+highest hit-rate plan blindly; it prefers candidates that fit the lazy-cache byte
+budget and stay inside the configured host/SSD bandwidth reserve. On crowded
+Macs, this avoids warming too many offloaded experts when the extra prefetching
+would burn the IO headroom needed for decode, swap, and model reads.
+
 ## 0.1.217 Core Delta
 
 Quantizy now checks MoE expert prefetch bandwidth pressure. For resident/offload
