@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.168 Core Delta
+
+Sparse KV resource guards now include a RAM recovery plan. The guard tells the
+app exactly how many bytes must be freed, the post-free effective budget that
+must be reached, the receipt thresholds required for activation, and the resume
+action after a valid free-RAM receipt exists.
+
 ## 0.1.167 Core Delta
 
 Sparse KV preflight now includes a resource guard. The app gets sparse peak
