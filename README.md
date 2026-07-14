@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.145 Core Delta
+
+Sparse target adoption validation now has explicit mismatch coverage for
+receipts that pass status but do not match the target runtime config. The
+validator holds activation and reports both the failed sparse quality-gate
+precondition and the receipt/config mismatch.
+
 ## 0.1.144 Core Delta
 
 Sparse target adoption validation now emits an adoption receipt and stamps it
