@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.133 Core Delta
+
+The paper-target sparse KV runtime config now carries its own quality-gate
+contract: receipt path, required status, implementation parameters, and selector
+activation rule. This makes the aggressive DeepSeek/FlashMemory-style path
+self-contained and verifiable instead of just selectable.
+
 ## 0.1.132 Core Delta
 
 The paper-target sparse KV next action now carries a ready runtime config for
