@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.253 Core Delta
+
+Quantizy now exposes a runtime launch-guard validator. A finalized memory-method
+config can be checked against the machine's current effective runtime budget
+before launching the model, returning an explicit authorization decision and
+RAM shortfall.
+
+This is the enforcement side of the previous launch guard: a method that was
+safe during validation can be blocked later if IDEs, browsers, or other local
+processes have consumed the headroom the proof depended on.
+
 ## 0.1.252 Core Delta
 
 Quantizy now carries benchmark proof into the finalized runtime config as a
