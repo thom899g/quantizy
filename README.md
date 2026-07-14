@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.239 Core Delta
+
+Quantizy now makes speculative expert-prefetch estimator selection overhead
+aware. Each predictor candidate carries estimated runtime overhead bytes,
+overhead class, and a small-PC fit decision, so the planner can avoid selecting
+a learned hidden-state estimator when its state would erase the memory win. In
+those cases it prefers lower-overhead same-block trace rules or Fate-style
+cross-layer gate evidence when the artifact trace supports them.
+
 ## 0.1.238 Core Delta
 
 Quantizy now ranks speculative expert-prefetch estimator styles instead of
