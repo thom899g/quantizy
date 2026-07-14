@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.180 Core Delta
+
+Memory-method readiness now includes actionable next-step payloads. The app can
+show a concrete benchmark, remediation, activation, finalization, or ready-to-run
+payload instead of inferring instructions from a status string.
+
 ## 0.1.179 Core Delta
 
 Memory-method runs now have a readiness summary. Quantizy reports the next
