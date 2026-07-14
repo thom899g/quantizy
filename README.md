@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.231 Core Delta
+
+Quantizy now imports the key DeepSeek-V4 CSA/HCA runtime guardrails into the
+sparse-KV planner. Aggressive compressed sparse attention, heavily compressed
+attention, and shared-KV hybrid paths now carry explicit stabilizer requirements:
+query/KV RMSNorm, partial RoPE handling, local sliding-window fallback, attention
+sink logits, mixed BF16/FP8 KV storage, and shared-KV MQA grouped projection
+where applicable. The selector only authorizes those paths when the quality
+receipt echoes the same stabilizer bundle, branch signature, fit-gain receipt,
+and free-RAM proof.
+
 ## 0.1.230 Core Delta
 
 Quantizy now adds a sparse-KV offload prefetch recovery ladder. When old KV
