@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.229 Core Delta
+
+Quantizy now models a DeepSeek-V4-style shared key/value sparse-KV profile.
+The planner keeps the existing conservative c4/c128/local-window path, then
+adds a gated `shared_kv_hybrid_c4_c128_sparse_indexed_kv` advisory for runtimes
+that can share key/value cache state with the required inverse-RoPE handling.
+On the 524k-token planner fixture, this lowers estimated KV retention from
+12.89% to 6.45% and raises same-KV logical context capacity to about 15.5x.
+It remains runtime-support and quality-gate required.
+
 ## 0.1.228 Core Delta
 
 Quantizy now emits a ranked MoE offload recovery ladder. If cold-expert
