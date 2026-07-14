@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.173 Core Delta
+
+The unified memory-method selector is now peak-aware. It reports each
+candidate's estimated runtime peak and headroom, and blocks an otherwise valid
+method when its peak exceeds the active runtime budget, falling back to a lower
+peak authorized method instead.
+
 ## 0.1.172 Core Delta
 
 Quantizy now has a unified memory-method selector. Sparse indexed KV and
