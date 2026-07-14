@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.204 Core Delta
+
+Sparse-KV fit planning can now charge a separate indexer-cache overhead. This
+matters for DeepSeek-style sparse attention paths where the lightning/indexer
+module may need its own cached keys or metadata, so Quantizy no longer has to
+treat selector score buffers as the only extra memory cost.
+
 ## 0.1.203 Core Delta
 
 Memory-method selection now ranks sparse-KV candidates by baseline evidence
