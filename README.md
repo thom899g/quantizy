@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.234 Core Delta
+
+Quantizy now adds a StreamIndex-style exact top-k advisory for DeepSeek
+CSA/DSA sparse selectors. Instead of treating chunked indexer workspace as a
+fixed cost, the planner can propose a streaming partition-merge selector that
+never materializes the full indexer score tensor and binds partition size,
+key-tile size, partition top-k, exact-topk mode, and peak bytes to the runtime
+receipt. On the 524k-token DSA fixture this lowers selector peak from
+`2,097,152` bytes to `1,148,160` bytes without reducing global top-k.
+
 ## 0.1.233 Core Delta
 
 Quantizy now adds a SPIN-style locality-aware sparse-KV offload check. Lookahead
