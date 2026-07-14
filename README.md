@@ -32,6 +32,21 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.258 Core Delta
+
+The MLA-style latent-cache planner now accounts for the memory needed to
+reconstruct full K/V values at the actual deployment context. Previously, a
+short calibration sequence could leave replay scratch undercounted at long
+context. Quantizy now reports both the conservative full-context materialize
+peak and a tiled decode-recompute envelope. The tiled envelope is advisory only
+until a verified runtime-kernel receipt is present, so a small-PC fit check will
+not quietly turn a research estimate into a shipping claim.
+
+This follows the compact-cache direction in
+[DeepSeek-V2](https://arxiv.org/abs/2405.04434) and the reuse-versus-recompute
+tradeoff analyzed in
+[Hardware-Centric Analysis of DeepSeek's MLA](https://arxiv.org/abs/2506.02523).
+
 ## 0.1.257 Core Delta
 
 Quantizy's sparse-KV residency ladder is now phase-aware during planning, not
