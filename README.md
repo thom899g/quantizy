@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.154 Core Delta
+
+Sparse activation validation now enforces free-RAM preconditions. If a sparse KV
+runtime config requires freeing RAM, a passing quality receipt is not enough:
+the receipt must report enough freed bytes before activation is authorized. This
+prevents a memory-tight sparse path from being enabled on stale or incomplete
+runtime evidence.
+
 ## 0.1.153 Core Delta
 
 Sparse KV policy output now includes a recommended quality-gate command hint
