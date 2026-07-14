@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.163 Core Delta
+
+Sparse KV planning now emits a fit-gain receipt for the selected profile. It
+reports same-context KV saved, net peak memory saved after selector overhead,
+context multiplier at the same KV budget, extra logical context tokens, and a
+fit-gain tier, so larger-model claims can be tied to explicit memory evidence.
+
 ## 0.1.162 Core Delta
 
 Sparse KV activation now binds quality receipts to the exact branch layout. A
