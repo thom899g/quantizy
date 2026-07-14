@@ -21,7 +21,7 @@ handoff. It is a practical local-AI utility, not a promise that every giant
 model will run on every computer.
 
 - Pay / sponsor: https://github.com/sponsors/thom899g
-- Download: https://github.com/thom899g/quantizy/releases/tag/v1.0.0
+- Download: https://github.com/thom899g/quantizy/releases/tag/v1.0.1
 - Request license and delivery: https://github.com/thom899g/quantizy/issues/new/choose
 - Buyer guide: [BUYER_QUICKSTART.md](BUYER_QUICKSTART.md)
 
@@ -59,6 +59,12 @@ and long-context sparse-KV directions discussed for [DeepSeek-V4](https://huggin
 It also accounts for transient prefill peaks, current RAM pressure, cold-expert
 offload bandwidth, and KV metadata rather than treating a paper estimate as a
 guaranteed runtime result.
+
+The latest DeepSeek research audit is in
+[`docs/DEEPSEEK_METHOD_AUDIT.md`](https://github.com/thom899g/quantizy-core/blob/main/docs/DEEPSEEK_METHOD_AUDIT.md).
+It records why MLA/DSA-inspired runtime planning is useful here, while Engram
+and Memory Grafting remain training-time research methods rather than promises
+that Quantizy can retrofit into arbitrary downloaded models.
 
 ## 0.1.258 Core Delta
 
@@ -809,14 +815,14 @@ or under-target receipts are rejected.
 Current gate:
 
 - GitHub release DMG:
-  `https://github.com/thom899g/quantizy/releases/download/v1.0.0/Quantizy-macos-arm64.dmg`
+  `https://github.com/thom899g/quantizy/releases/download/v1.0.1/Quantizy-macos-arm64.dmg`
   — V1 release asset
 - GitHub Sponsors: `https://github.com/sponsors/thom899g` — manual payment path
   pending live account-state confirmation
 - Public worker: `https://worker.ontarioprotocol.com/ready` — not resolving;
   automatic Stripe checkout stays closed
 - Ontarioprotocol DMG mirror — not used for V1 delivery
-- Local release: signed/notarized `1.0.0` artifact matches the checksum below
+- Local release: signed/notarized `1.0.1` artifact matches the checksum below
 
 Do not pay anyone claiming to sell Quantizy from a different repository. The
 public product front is:
@@ -844,7 +850,7 @@ shasum -a 256 Quantizy-macos-arm64.dmg
 Expected SHA-256 for V1:
 
 ```text
-51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622
+03316a1198d154e22faa450c91dbada7191866af16b7e9ad9b7f6cd09f23cc38
 ```
 
 The app and DMG are Developer ID signed, Apple-notarized, stapled, and
@@ -2305,11 +2311,11 @@ This helps users see why the safer KV rerun is still worth trying even after
 lowering context for runtime margin.
 
 These older sections track the faster-moving open core before the V1 package was
-cut; the current public Mac DMG is `1.0.0`.
+cut; the current public Mac DMG is `1.0.1`.
 
 ## Release
 
-- Version: `1.0.0`
+- Version: `1.0.1`
 - Notary submission: `67607b0a-8c4b-4510-87f2-4af6721e894f`
 - Signing identity: `Developer ID Application: THOMAS TOBIAS HANSEN (857AHQ92PC)`
 - Release manifest: [`Quantizy-release.json`](./Quantizy-release.json)
@@ -2318,7 +2324,7 @@ cut; the current public Mac DMG is `1.0.0`.
 
 ## Paid Access
 
-`1.0.0` is the first shipped V1 fit-advisor release: the packaged app embeds
+`1.0.1` is the first shipped V1 fit-advisor release: the packaged app embeds
 the Quantizy public license key and requires a valid offline license before
 licensed actions run. V1 personal access is **$49** through GitHub Sponsors,
 with manual license delivery from the same account after payment is confirmed.
@@ -2349,7 +2355,7 @@ moe-squeeze manual-buyer-handoff \
   --email-body
 ```
 
-Historical note: the public DMG was `0.1.9` at this point; the current V1 package is `1.0.0`.
+Historical note: the public DMG was `0.1.9` at this point; the current V1 package is `1.0.1`.
 
 ## 0.1.11 Core Delta
 
@@ -2358,7 +2364,7 @@ The core fit matrix now has a deeper runtime pressure survival ladder:
 That gives smaller or crowded Macs more fallback recipes when IDEs, browsers,
 or other local-AI tools suddenly eat RAM after the first fit check.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.12 Core Delta
 
@@ -2376,7 +2382,7 @@ real pressure from IDEs, browsers, and other local tools?" The report now keeps
 those two promises separate, including whether the survival context is smaller
 than the user originally requested.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.13 Core Delta
 
@@ -2395,7 +2401,7 @@ This is aimed at the real buyer scenario: the Mac is already running IDEs,
 browsers, and other local tools, so the recommendation must survive pressure
 without pretending the original request still fits.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.14 Core Delta
 
@@ -2412,7 +2418,7 @@ This makes the engine more useful for lesser-PC decisions: a user can choose
 whether they want quality, headroom, or context length without manually reading
 every fit row.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.15 Core Delta
 
@@ -2429,7 +2435,7 @@ Quantizy can still return a primary runnable survival recipe with:
 That turns an impossible request into an actionable "this is what will actually
 run on this machine" answer instead of a dead-end failure.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.16 Core Delta
 
@@ -2447,7 +2453,7 @@ This makes the smaller-machine answer easier to trust: Quantizy does not only
 say "use fewer tokens," it says exactly how much was cut and which RAM-pressure
 budget forced that decision.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.17 Core Delta
 
@@ -2464,7 +2470,7 @@ baseline family such as `unsloth_dynamic` or `gguf_dynamic`. Uniform-only wins
 can still be useful internally, but they are no longer enough for a serious V1
 quality claim when this gate is enabled.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.18 Core Delta
 
@@ -2479,7 +2485,7 @@ That separates internal wins from public-safe claims. A recipe that only beats
 uniform can still be studied, while a recipe that also beats a strong dynamic
 baseline is clearly marked as stronger launch evidence.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.19 Core Delta
 
@@ -2498,7 +2504,7 @@ Quantizy can now turn the result into a clear action such as “set context to
 93,735 tokens and use this critical-pressure recipe,” rather than leaving the
 buyer to interpret the matrix by hand.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.20 Core Delta
 
@@ -2519,7 +2525,7 @@ models are often blocked by KV cache, not only by weight size. This upgrade
 makes Quantizy better at turning that insight into a concrete smaller-machine
 adapter plan for compatible MHA/GQA-style models.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.21 Core Delta
 
@@ -2542,7 +2548,7 @@ from 26 bytes to 14 bytes because the turbo codec removes scale overhead. This
 is planner support, not yet a claim that a finished MLX TurboQuant runtime
 kernel ships in the public Mac app.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.22 Core Delta
 
@@ -2566,7 +2572,7 @@ Current synthetic policy gates show the practical jump:
 This is planner and receipt support, not yet a claim that a finished MLX
 TurboQuant runtime kernel ships in the public Mac app.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.23 Core Delta
 
@@ -2586,7 +2592,7 @@ This keeps the product honest: Quantizy can show exactly where the smaller-PC
 win came from, which baseline it beat, and whether it was a planner win rather
 than a finished runtime-kernel claim.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.24 Core Delta
 
@@ -2607,7 +2613,7 @@ This is another evidence/decision upgrade for smaller PCs: Quantizy can tie the
 memory win to the runnable recommendation instead of leaving users to infer it
 from raw planner rows.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.25 Core Delta
 
@@ -2629,7 +2635,7 @@ This does not claim better model quality. It makes the memory win auditable, so
 Quantizy can show exactly why an auto-selected recipe fits a lesser PC better
 than the default KV path.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.26 Core Delta
 
@@ -2649,7 +2655,7 @@ Why it matters: this makes the recommendation usable by normal buyers. They can
 see not only that Quantizy saved memory, but which exact KV-cache strategy made
 the million-token recipe fit on a smaller/crowded machine.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.27 Core Delta
 
@@ -2667,7 +2673,7 @@ claim until a perplexity or task-quality gate passes.
 This protects the product from overclaiming while still making the memory-fit
 win usable and auditable.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.28 Core Delta
 
@@ -2686,7 +2692,7 @@ Why it matters: Quantizy now closes the loop from "this huge context fits" to
 "run this next before making a quality claim." That keeps the product useful
 for smaller machines while preserving the honest validation bar.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.29 Core Delta
 
@@ -2709,7 +2715,7 @@ Why it matters: Quantizy can now explain the win in the language users care
 about: how much smaller the KV path is and how much more context the same
 machine can carry.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.30 Core Delta
 
@@ -2733,7 +2739,7 @@ In the verified survival gate, the summary reports a reduced-context
 1,000,000-token auto-KV gate, it reports full requested-context fit with
 `29.5376%` runtime headroom.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## 0.1.31 Core Delta
 
@@ -2751,7 +2757,7 @@ Why it matters: this turns a failed fit into a next action. Instead of only
 saying "no," Quantizy can tell the user the safe context cap and point them
 toward the stronger memory search paths that may recover the original request.
 
-This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.0`.
+This is an engine-side upgrade in `quantizy-core`; historically, the public package was `0.1.9`; the current V1 package is `1.0.1`.
 
 ## License
 

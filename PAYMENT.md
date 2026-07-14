@@ -15,19 +15,19 @@
    time: offline license key, release URL, SHA-256 checksum, buyer quickstart,
    and support path.
 4. Download V1 from the
-   [GitHub Release](https://github.com/thom899g/quantizy/releases/tag/v1.0.0)
+   [GitHub Release](https://github.com/thom899g/quantizy/releases/tag/v1.0.1)
    and verify the checksum before opening the DMG.
 
 V1 download:
 
 ```text
-https://github.com/thom899g/quantizy/releases/download/v1.0.0/Quantizy-macos-arm64.dmg
+https://github.com/thom899g/quantizy/releases/download/v1.0.1/Quantizy-macos-arm64.dmg
 ```
 
 V1 DMG SHA-256:
 
 ```text
-51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622
+03316a1198d154e22faa450c91dbada7191866af16b7e9ad9b7f6cd09f23cc38
 ```
 
 ## Operator Fulfillment

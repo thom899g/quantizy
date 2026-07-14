@@ -7,9 +7,9 @@ message was sent without evidence.
 ## Product
 
 - Front: https://github.com/thom899g/quantizy
-- Release: https://github.com/thom899g/quantizy/releases/tag/v1.0.0
-- DMG: https://github.com/thom899g/quantizy/releases/download/v1.0.0/Quantizy-macos-arm64.dmg
-- DMG SHA-256: `51b5b2f1bd1923d5d427c859f407840e1020031d39d312d85dedec71e7474622`
+- Release: https://github.com/thom899g/quantizy/releases/tag/v1.0.1
+- DMG: https://github.com/thom899g/quantizy/releases/download/v1.0.1/Quantizy-macos-arm64.dmg
+- DMG SHA-256: `03316a1198d154e22faa450c91dbada7191866af16b7e9ad9b7f6cd09f23cc38`
 - Buyer guide: https://github.com/thom899g/quantizy/blob/main/BUYER_QUICKSTART.md
 - Payment: https://github.com/sponsors/thom899g
 - License request: https://github.com/thom899g/quantizy/issues/new/choose
@@ -71,7 +71,7 @@ model fit.
 
 I can provide a free reviewer license for an honest test of install, activation,
 fit guidance, and the buyer workflow. The release is here:
-https://github.com/thom899g/quantizy/releases/tag/v1.0.0
+https://github.com/thom899g/quantizy/releases/tag/v1.0.1
 
 Would that be useful for your audience or project?
 ```
