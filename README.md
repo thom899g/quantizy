@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.252 Core Delta
+
+Quantizy now carries benchmark proof into the finalized runtime config as a
+launch guard. The final config records the required effective runtime budget,
+measured peak envelope, measured/estimated savings, latency ratio, and
+repeat-run stability bounds that were proven by the activation receipt.
+
+This turns validation into an enforceable runtime condition: the app can reject
+launches when the current machine no longer has the measured safe headroom,
+instead of trusting an old proof after memory pressure changes.
+
 ## 0.1.251 Core Delta
 
 Quantizy now checks benchmark stability across repeated measurements before a
