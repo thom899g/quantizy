@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.256 Core Delta
+
+Quantizy now carries a DeepSeek Sparse Attention-style phase-layout contract for
+lookahead sparse KV. The runtime config records separate prefill and decode
+cache/indexer peaks, and method selection rejects a candidate when either phase
+exceeds the current effective RAM budget.
+
+This prevents a local-PC false positive: a sparse-KV plan can look resident-fit
+while the decode indexer cache or active prefetch set still pushes the machine
+over budget.
+
 ## 0.1.255 Core Delta
 
 Quantizy's `memory-method-readiness` CLI can now run the launch-aware guard
