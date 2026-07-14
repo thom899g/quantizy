@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.189 Core Delta
+
+Quantizy now plans FlashMemory-style lookahead residency for sparse KV. In tight
+RAM cases it estimates how much global sparse KV can be offloaded while keeping
+query-critical chunks resident, and reports whether that would remove the free
+RAM requirement.
+
 ## 0.1.188 Core Delta
 
 Selector relief is now MISA-aware. When selector workspace is too large, Quantizy
