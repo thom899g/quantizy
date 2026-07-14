@@ -14,8 +14,8 @@ message was sent without evidence.
 - Payment: https://github.com/sponsors/thom899g
 - License request: https://github.com/thom899g/quantizy/issues/new/choose
 - Price: `$49` personal V1 license
-- Core research head: https://github.com/thom899g/quantizy-core/commit/d2a93d2
-- Core verification: `940 passed, 2 warnings`; the research head is not part of
+- Core research head: https://github.com/thom899g/quantizy-core/commit/d8f78e8
+- Core verification: `941 passed, 2 warnings`; the research head is not part of
   the signed V1.0.1 DMG until a deliberate versioned rebuild is published.
 
 ## Reviewer Offer
