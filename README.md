@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.230 Core Delta
+
+Quantizy now adds a sparse-KV offload prefetch recovery ladder. When old KV
+pages are planned for SSD sidecars, the lookahead residency report now ranks
+what to do if decode would stall: keep more global sparse KV resident / lower
+offload recall, lower the target decode TPS, or move sidecars to faster storage
+/ reduce IO contention. This makes long-context offload planning practical on
+crowded desktops instead of only saying that the plan is blocked.
+
 ## 0.1.229 Core Delta
 
 Quantizy now models a DeepSeek-V4-style shared key/value sparse-KV profile.
