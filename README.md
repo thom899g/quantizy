@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.182 Core Delta
+
+Quantizy now models a DeepSeek-V3.2/NSA-style sparse attention path for huge
+contexts: compressed coarse memory, selected fine blocks, and a local sliding
+window. In constrained RAM cases it can choose this DSA middle path before
+falling to more extreme compression, with quality-gate receipts still required.
+
 ## 0.1.181 Core Delta
 
 Memory-method readiness is now exposed through the CLI. The app and scripts can
