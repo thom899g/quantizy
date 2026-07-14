@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.146 Core Delta
+
+Sparse target adoption holds now surface exact receipt/config drift at the
+adoption layer. If a quality receipt says pass but carries stale selector
+parameters, callers get the required value and the receipt value without
+digging through nested selector diagnostics.
+
 ## 0.1.145 Core Delta
 
 Sparse target adoption validation now has explicit mismatch coverage for
