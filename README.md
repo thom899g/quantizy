@@ -32,6 +32,21 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.241 Core Delta
+
+Quantizy now turns the newer DeepSeek/FlashMemory direction into a concrete
+runtime contract instead of a loose research note. The sparse-KV planner emits
+a backbone-free neural memory indexer contract for lookahead residency: chunk
+size, predicted query count, embedding table bytes, query-encoder overhead,
+required query-critical recall, target physical KV ratio, and the exact
+validation requirement are all bound into the quality gate.
+
+The MoE side also now emits a speculative expert-prefetch runtime config, not
+just an advisory. It carries the selected estimator, source paper, overhead
+bytes/class, small-PC overhead fit, required future hit rate, bandwidth overlap
+status, and receipt contract. Both paths remain gated: they are executable
+targets for validation, not unproven marketing claims.
+
 ## 0.1.240 Core Delta
 
 Quantizy now binds speculative expert-prefetch receipts to the selected
