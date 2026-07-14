@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.144 Core Delta
+
+Sparse target adoption validation now emits an adoption receipt and stamps it
+onto the activation config when authorized. This gives paper-target sparse KV a
+runtime audit trail showing standard KV status, user opt-in, selector receipt
+authorization, missing preconditions, and the final activation action.
+
 ## 0.1.143 Core Delta
 
 Quantizy now exposes a sparse target adoption validator. Runners can ask one
