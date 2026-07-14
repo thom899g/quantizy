@@ -32,6 +32,16 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.236 Core Delta
+
+Quantizy now makes speculative expert prefetch receipt-bound instead of leaving
+it as a loose research hint. The new validator only authorizes the path when the
+estimator receipt proves the required future-expert hit rate, exact-router
+fallback, speculative slot count, hidden blocking bytes, remaining blocking
+bytes, and bandwidth-overlap status. This keeps the MoE offload path usable on
+smaller PCs without silently enabling an estimator that was not actually proven
+on the buyer's artifact and trace.
+
 ## 0.1.235 Core Delta
 
 Quantizy now adds a speculative expert-prefetch advisory for offloaded MoE
