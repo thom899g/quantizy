@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.166 Core Delta
+
+Sparse KV planning now emits a preflight action for the app. It combines the
+run-readiness verdict, free-RAM target, quality-gate command, receipt contract,
+and runtime config into one object so the app can tell the user exactly whether
+to run the quality gate now, free RAM first, measure RAM, or hold the sparse
+runtime path.
+
 ## 0.1.165 Core Delta
 
 Sparse KV planning now emits a run-readiness verdict. The planner classifies
