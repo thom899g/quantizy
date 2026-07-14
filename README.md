@@ -32,6 +32,19 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.246 Core Delta
+
+Quantizy now requires per-passage quality evidence before sparse-KV methods can
+claim a win over equal-budget uniform and dynamic baselines. Average-only
+receipts are treated as insufficient evidence, and noisy wins are blocked when
+the passage-level win rate is too low or any held-out passage regresses beyond
+the configured quality/KL limits.
+
+This reflects the current DeepSeek sparse-attention lesson: long-context
+indexers and KV pruning are useful only when they survive repeated prompt-level
+checks against strong dynamic baselines, not when one averaged benchmark looks
+good.
+
 ## 0.1.245 Core Delta
 
 Quantizy now audits transient prompt-prefill workspace inside memory-method
