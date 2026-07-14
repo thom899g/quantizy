@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.195 Core Delta
+
+Lookahead residency activation is now bound to the exact prefetch assumptions
+validated by the quality receipt. Quantizy rejects runtime activation if the
+receipt changes bandwidth, latency, recall, allocator slack, or prefetch bytes.
+
 ## 0.1.194 Core Delta
 
 Lookahead sparse-KV residency is now bandwidth-aware. Quantizy blocks residency
