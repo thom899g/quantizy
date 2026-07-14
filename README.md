@@ -32,6 +32,12 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.192 Core Delta
+
+Quantizy now plans DeepSeek V4-style bucketed cache packing for mixed sparse-KV
+layouts. The fit report records shared logical-token blocks, page-bucket use,
+and estimated pool-count reduction before enabling c4/c128/SWA residency paths.
+
 ## 0.1.191 Core Delta
 
 Lookahead sparse-KV residency now has receipt-bound runtime validation.
