@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.139 Core Delta
+
+The paper-target sparse KV next action now includes a deterministic priority
+score. The score rewards estimated fit impact and discounts implementation risk
+plus the required quality gate, giving downstream runners a stable way to rank
+the aggressive sparse path against other recovery options.
+
 ## 0.1.138 Core Delta
 
 The Fit Matrix paper-target next action now carries the sparse fit-impact tier,
