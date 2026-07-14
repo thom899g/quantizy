@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.167 Core Delta
+
+Sparse KV preflight now includes a resource guard. The app gets sparse peak
+bytes, required post-free effective budget, current effective budget, launch
+deficit, block reason, and a launch-allowed flag, so memory-tight runs can be
+blocked before the machine thrashes.
+
 ## 0.1.166 Core Delta
 
 Sparse KV planning now emits a preflight action for the app. It combines the
