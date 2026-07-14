@@ -96,6 +96,14 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.159 Core Delta
+
+Quantizy now exposes `build_sparse_kv_quality_receipt`, a helper that turns a
+sparse KV quality-gate command hint into the exact receipt shape required for
+activation. This makes the sparse path executable end-to-end: command hint,
+receipt contract, generated receipt, selector validation, and target adoption
+now use one shared contract.
+
 ## 0.1.158 Core Delta
 
 Sparse KV quality-gate command hints now include a receipt contract. The hint
