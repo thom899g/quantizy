@@ -32,6 +32,13 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.171 Core Delta
+
+MHA-to-MLA latent-cache policies now have activation receipts. Quantizy can
+convert a passing latent-cache sweep into a receipt only when the selected
+policy meets the retained-KV target and reconstruction-error threshold; tampered
+or under-target receipts are rejected.
+
 Current gate:
 
 - GitHub release DMG:
