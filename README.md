@@ -32,6 +32,15 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.221 Core Delta
+
+Quantizy artifact inspection can now use measured local IO bandwidth for MoE
+expert prefetch pressure. Pass a JSON bandwidth receipt from the existing local
+probe flow, or enable path-classified automatic bandwidth, and the resident-set
+and prefetch planners use that measured/estimated disk speed instead of a manual
+guess. This makes cold-expert offload decisions more machine-specific on lesser
+PCs, especially when models live on external SSDs or crowded local storage.
+
 ## 0.1.220 Core Delta
 
 Quantizy now feeds expert prefetch pressure back into automatic resident-set
