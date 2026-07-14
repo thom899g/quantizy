@@ -32,6 +32,17 @@ notarized `0.1.9` build is available from GitHub Releases, and paid activation
 is handled by manual license delivery while automatic Stripe fulfillment is
 being brought online.
 
+## 0.1.255 Core Delta
+
+Quantizy's `memory-method-readiness` CLI can now run the launch-aware guard
+directly. Pass `--current-effective-runtime-budget-bytes` with the machine's
+current effective RAM budget and the command will return
+`free_ram_or_rebenchmark` when the validated method no longer has enough
+headroom to launch.
+
+This makes the local workflow enforceable outside the app: scripts and users
+can check the same current-RAM launch condition before starting a large model.
+
 ## 0.1.254 Core Delta
 
 Quantizy readiness checks can now include the current effective runtime budget.
