@@ -96,6 +96,13 @@ The compression-quality claim has robust evidence on OLMoE and Granite target
 gates, but broader buyer-facing models such as Qwen-class targets still need
 their own validation before being marketed as a breakthrough.
 
+## 0.1.132 Core Delta
+
+The paper-target sparse KV next action now carries a ready runtime config for
+the target profile. A runner or UI can switch from conservative sparse planning
+to the DeepSeek/FlashMemory-style target path without reconstructing planner
+state, while activation remains disabled until the sparse quality gate passes.
+
 ## 0.1.131 Core Delta
 
 Quantizy now promotes the sparse KV paper-target advisory into the Fit Matrix
